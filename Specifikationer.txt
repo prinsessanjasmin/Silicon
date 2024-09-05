@@ -1,0 +1,52 @@
+CONTENTS 
+topBox 
+- textBlock
+- 
+
+
+Topptextbox:
+Mått 526 x 332
+
+Headline (Manage All...): 	Manrope ExtraBold 34.1	Line height : 44.4  H1
+
+"Ingress" (We offer...): 	Manrope Regular 18	Line height 28.8
+
+Knappar om att ladda ner appen 
+Apple 
+Google Play 
+
+Discover more: 			Manrope Regular 14	Line height 22.4
+
+APP FEATURES 
+Heading 2 (App features etc) 	Manrope ExtraBold 27.9 	LH 36.2
+Lorem ipsum: 			Manrope Regular 18 	LH 28.8
+
+Heading 3 (Easy payments, etc): Manrope ExtraBold 20	LH 28 
+Lorem ipsum: 			Manrope Regular 16	LH 25.6
+
+HOW DOES IT WORK?
+Heading 2 (App features etc) 	Manrope ExtraBold 27.9 	LH 36.2
+
+Transfers to people…: 		Manrope ExtraBold 21.6	LH 30.2
+Lorem ipsum: 			Manrope Regular 16	LH 25.6
+
+ANY QUESTIONS?
+Any questions?: 		Manrope ExtraBold 24.7	LH 32.1
+Still?: 			Manrope Regular 18	LH 28.8
+
+FAQS
+Questions: 			Manrope SemiBold 16 	LH 20.8
+Answers: 			Manrope Regular 14	LH 22.4
+
+CONTACT US/SUBSCRIBE 
+Buttons				Manrope SemiBold 14	LH 22.4
+
+SUBSCRIBE TO OUR NEWSLETTER 	Manrope ExtraBold 21.6	LH 30.2
+Your e-mail: 			Manrope Regular 16	LH Auto
+
+
+Total bredd: 1920
+Höjd sida 1: 876
+Marginaler: ca 300 (6,4 procent) 
+
+Vanlig skärmstorlek 1920x1080
