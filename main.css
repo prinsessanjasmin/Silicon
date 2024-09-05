@@ -134,6 +134,7 @@ body {
     margin: 1rem;
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
 
     h1 {
         margin: 1.5rem;
@@ -151,15 +152,17 @@ body {
         text-align: center;
     }
 
-    image-container {
-        width: 95vw;
-        height: 50px;
+    .download-button {
+        border-radius: 10px;
+        background-color: #0B0F19;
     }
 
     img {
-        width: 95vw;
+        width: 90vw;
         height: 50px;
-        object-fit: contain;
+        align-items: center;
+        object-fit: none;
+        
     }
 
 }
