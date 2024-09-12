@@ -256,7 +256,7 @@ header {
     }
 }
 
-
+/* ---PAGE 3--- */
 
 #p-3 {
     background-color: var(--clr-gray-100);
@@ -303,6 +303,8 @@ header {
     }
 }
 
+/* ---PAGE 4--- */
+
 #p-4 {
     display: flex;
     flex-direction: column;
@@ -312,7 +314,20 @@ header {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
     }
+
+    .collapse-faq {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .faq {
+        display: flex;
+        flex-direction: column;
+    }
+
 
     /* Following collapsible buttons are made with help from W3 Schools tutorial */
     /* Style the button that is used to open and close the collapsible content */
@@ -342,19 +357,59 @@ header {
         }
     }
     
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    .active, .collapsible:hover {
-        background-color: var(--clr-gray-100);
+    #faq-1 {
+        .content {
+            display: flex;
+        }
+
+        #down-arrow {
+            background-color: var(--clr-primary);
+            transform: rotate(180deg);
+            color: white;
+        } 
     }
-    
+
     /* Style the collapsible content. Note: hidden by default */
     .content {
-        padding: 0 18px;
-        display: none;
+        padding: 8px 18px;
+        display: flex;
+        flex-direction: column;
+        color: var(--clr-gray-700);
+        background-color: white;
+        border: .2px solid var(--clr-gray-300);
+        border-radius: 6px;
         overflow: hidden;
-        background-color: #f1f1f1;
+        background-color: white;
+        
+
+        p {
+            padding-bottom: 1rem;
+            font-size: 14px;
+        }
+
+        display: none;
     }
-    }
+}
+
+/* --- PAGE 5 --- */
+#button-container {
+    width: 100vw;
+    height: 20vw;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-btn {
+    width: 162px;
+    height: 50px;
+    background-color: var(--clr-primary);
+    border: none; 
+    border-radius: 6px;
+    color: white;
+} 
+   
+
 
 
 
