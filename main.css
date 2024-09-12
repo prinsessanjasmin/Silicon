@@ -22,8 +22,9 @@
 
 * {
     margin: 0; 
-    padding: 0%;
+    padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -31,15 +32,23 @@ body {
     font-optical-sizing: auto;
 }
 
+.container {
+    margin: auto; 
+    padding-inline: 1rem; 
+}
+
 /* --- HEADER --- */
+header {
+    background: var(--clr-gradient)
+}
+
 .header-container {
     display: grid;
     grid-template-columns: 1fr auto auto;
     gap: 1rem;
     align-items: center; 
     justify-content: space-between; 
-    padding: .5rem .5rem .2rem .5rem;
-    background: var(--clr-gradient)
+    padding: .5rem 1rem .2rem .5rem;
 }
 
 #feature-menu {
@@ -141,7 +150,7 @@ body {
 
 #p-1 {
     display: flex;
-    margin: 0 1rem 3rem 1rem;
+    margin-bottom: 3rem;;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
@@ -210,7 +219,7 @@ body {
 
 /* PAGE 2 */
 .textpage {
-    margin: 0 .5rem 2rem .5rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -251,7 +260,7 @@ body {
 
 #p-3 {
     background-color: var(--clr-gray-100);
-    margin: 2rem 0;
+    margin-top: 2rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
     display: flex;
@@ -295,7 +304,6 @@ body {
 }
 
 #p-4 {
-    margin: 0 .5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -419,10 +427,13 @@ p {
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
     .header-container {
-        grid-template-columns: 1fr auto auto auto;
-        gap: 3rem;
-
+        grid-template-columns: 1fr auto auto;
+        padding-top: 1rem;
     }
     
     .toggle-switch-label {
@@ -435,13 +446,10 @@ p {
     #p-1 {
         display: grid;
         width: auto;
-        margin: 0 2rem 3rem 2rem; 
-        grid-template-columns: 17vw 17vw 56vw;
+        grid-template-columns: 2fr 2fr 3fr;
         grid-template-rows: auto 2fr 3fr 2fr 2fr;
         align-items: center; 
         justify-content: space-evenly
-        /* gap: 0.5rem; */
-        /* padding-top: 1rem; */
     }
 
     #headline {
@@ -475,19 +483,19 @@ p {
 
     .btn-pic {
         object-fit: contain;
-        width: 13vw;
+        width: 90%;
     }
 
     #apple-box {
         display: flex;
-        width: 15vw;
-        height: 40px;
+        width: 126px;
+        height: 44px;
     }
 
     #google-box {
         display: flex;
-        width: 16vw;
-        height: 40px;
+        width: 138px;
+        height: 44px;
     }
 
     #discover {
@@ -503,7 +511,6 @@ p {
         height: auto;
         grid-row: 2/6;
         grid-column: 3/4;
-        
     }
 
     #ip-1 {
@@ -524,11 +531,12 @@ p {
             align-items: center;
             justify-content:space-evenly;
             flex-direction: row;
+            gap: 1rem;
         
             .logo-holder {
                 padding: 1.5rem 0.5rem;
-                width: 158.5px;
-                height: 98.54px;
+                width: 130px;
+                height: 90px;
                 border: 2px solid var(--clr-gray-300);
                 border-radius: .5em;
 
@@ -550,37 +558,24 @@ p {
     .footer-class {
         display: flex;
         flex-direction: row;
+        margin: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
     }
 }
 
 @media (min-width: 1200px) {
-    body {
-        margin: 1rem;
+    .container {
+        max-width: 1140px;
     }
-
-    /* header {
-        margin: 1rem 3rem;
-    } */
 
     .header-container {
-        grid-template-columns: 1fr 1fr 4fr 2fr 1fr;
-        gap: 3rem;
-    }
-
-    #logo-section {
-        
-        .logo-container {
-            margin: 3rem 1rem;
-
-            .logo-holder {
-                width: 196px;
-                height: 100px;
-            }
-    
-            .logo-lrg {
-                display: flex;
-            }
-        }
+        grid-template-columns: 1fr 1fr 5fr 1fr;
+        padding: 0rem 1rem 0 1rem;
     }
 
     #feature-menu {
@@ -594,13 +589,14 @@ p {
     }
 
     .toggle-switch-button {
-        grid-column: 4/5;
+        grid-column: 3/4;
+        justify-self: end;
     }
 
     #signin-button {
         display: block;
         justify-self: end;
-        grid-column: 5/6;
+        grid-column: 4/5;
         text-decoration: none;
 
         i {
@@ -608,4 +604,110 @@ p {
         }
     }
 
+
+    /* --- PAGE ONE --- */
+
+    #page-1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #p-1 {
+        display: grid;
+        margin: 0;
+        grid-template-columns: 1fr 1fr 3fr;
+        grid-template-rows: auto auto auto auto;
+        align-items: center; 
+        justify-content: space-evenly;
+    }
+
+    #headline {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        font-size: 42px;
+        text-align: left;
+        margin-top: 5rem;
+        
+    }
+        
+    #teaser {
+        grid-row: 2/3;
+        grid-column: 1/3; 
+        width: auto;
+        text-align: left;
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+    
+
+    #apple {
+        justify-self: center;
+        grid-row: 3/4;
+        grid-column: 1 / 2;
+    }
+
+    #google {
+        justify-self: center;
+        grid-row: 3/4;
+        grid-column: 2 / 3;
+    }
+
+    .download-button {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-pic {
+        object-fit: contain;
+        width: 90%;
+    }
+
+    #apple-box {
+        display: flex;
+        width: 180px;
+        height: 52px;
+    }
+
+    #google-box {
+        display: flex;
+        width: 180px;
+        height: 52px;
+    }
+
+    #discover {
+        grid-row: 4/5;
+        grid-column: 1/3;
+        justify-self: center;
+    }
+    
+    #img-co-1 {
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+        padding-top: 4rem;
+        width: 90%;
+        height: auto;
+        grid-row: 1/5;
+        grid-column: 3/4;
+    }
+
+
+/* --- LOGO SECTION --- */
+    #logo-section {
+        
+        .logo-container {
+            margin-top: 3rem;
+
+            .logo-holder {
+                width: 180px;
+                height: 90px;
+            }
+    
+            .logo-lrg {
+                display: flex;
+            }
+        }
+    }
+
+    
 }
