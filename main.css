@@ -357,6 +357,10 @@ header {
         }
     }
     
+.collapse-faq {
+    margin-bottom: 2rem;
+}
+
     #faq-1 {
         .content {
             display: flex;
@@ -381,7 +385,6 @@ header {
         overflow: hidden;
         background-color: white;
         
-
         p {
             padding-bottom: 1rem;
             font-size: 14px;
@@ -392,25 +395,79 @@ header {
 }
 
 /* --- PAGE 5 --- */
+/* ---CONTACT US ---*/
+
 #button-container {
     width: 100vw;
-    height: 20vw;
+    /* height: 20vh; */
+    margin-bottom: 2rem;
     display: flex; 
     justify-content: center;
     align-items: center;
 }
 
-#contact-btn {
+.button {
     width: 162px;
     height: 50px;
     background-color: var(--clr-primary);
     border: none; 
     border-radius: 6px;
     color: white;
-} 
+}
    
+/* --- SUBSCRIBE --- */
+#subscribe-container {
+    background-color: var(--clr-gray-100);
+    margin: .5rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
 
+#bell-sub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
 
+#subscribe-text {
+    font-weight: 900;
+  }
+
+#input-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    
+
+    
+}
+
+#email-input {
+    height: 50px;
+    width: 230px;
+    border: 1px solid var(--clr-gray-400);
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#email-input::placeholder {
+    font-family: "Manrope", sans-serif;
+    padding: .5rem;
+    color: var(--clr-gray-500)
+}
+
+#sub-btn {
+    width: 100px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
 
 
 .footer-class {
