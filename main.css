@@ -420,11 +420,18 @@ header {
 
 #button-container {
     width: 100vw;
-    /* height: 20vh; */
     margin-bottom: 2rem;
     display: flex; 
     justify-content: center;
     align-items: center;
+}
+
+#contact-container {
+    margin-bottom: 2rem;
+
+    justify-content: center;
+    align-items: center;
+    display: none;
 }
 
 .button {
@@ -435,6 +442,14 @@ header {
     border-radius: 6px;
     color: white;
 }
+
+.card {
+    border: 1px solid var(--clr-gray-500);
+    border-radius: 6px;
+    display: none;
+}
+
+
    
 /* --- SUBSCRIBE --- */
 #subscribe-container {
@@ -561,6 +576,7 @@ p {
 
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
+
     .container {
         max-width: 720px;
     }
@@ -688,70 +704,87 @@ p {
         }
     }
 
-/* PAGE 2 */
-.app-feature-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-/* --- PAGE 3 --- */
-
-#p-3 {
-    background-color: var(--clr-gray-100);
-    margin-top: 2rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    
-
-    .text-item {
-        font-size: 33px;
+    /* PAGE 2 */
+    .app-feature-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
-}
-#three-displays {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-right: 3rem;
 
-    #first-phone {
+    /* --- PAGE 3 --- */
+
+    #p-3 {
+        background-color: var(--clr-gray-100);
+        margin-top: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         display: flex;
-        width: 20vw;
+        flex-direction: column;
+        justify-content: center;    
+
+        .text-item {
+            font-size: 33px;
+        }
     }
-
-    #iphone-montage {
-        width: 33vw;
-        padding-left: 3.2rem;
-    }
-
-    #third-phone {
-        display: flex;
-        width: 20vw;
-}
-
-#step-3 {
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.text-item-2 {
-    display: grid; 
-    grid-template-columns: auto 1fr;
-}
-
-
-
-
-
-
-/* --- FOOTER --- */
-
-    .footer-class {
+    #three-displays {
         display: flex;
         flex-direction: row;
-        margin: auto;
+        justify-content: center;
+        align-items: center;
+        padding-right: 3rem;
+
+        #first-phone {
+            display: flex;
+            width: 20vw;
+        }
+
+        #iphone-montage {
+            width: 33vw;
+            padding-left: 3.2rem;
+        }
+
+        #third-phone {
+            display: flex;
+            width: 20vw;
+        }
+    }
+
+    #step-3 {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .text-item-2 {
+        display: grid; 
+        grid-template-columns: auto 1fr;
+    }
+
+    /* ---CONTACT SECTION--- */
+
+    #button-container {
+        display: none;
+    }
+
+    #contact-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--clr-gray-500);
+        border-radius: 6px;
+
+    }
+
+
+    /* --- FOOTER --- */
+
+        .footer-class {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+        }
     }
 }
 
