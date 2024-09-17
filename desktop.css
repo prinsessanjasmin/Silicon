@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --clr-gray-100: #F3F6FF;
+    --clr-gray-200: #FFFFFF;
+    --clr-gray-300: #E2E5F1;
+    --clr-gray-400: #D4D7E5;
+    --clr-gray-500: #B4B7C9;
+    --clr-gray-600: #9397AD;
+    --clr-gray-700: #565973;
+    --clr-gray-800: #33354D;
+    --clr-gray-900: #0B0F19;
+
+    --clr-primary: #6366F1;
+    --clr-gradient: linear-gradient(90deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.15) 50%, rgba(217, 70, 239, 0.15) 100%);
+
+    --clr-system-error: #EF4444; 
+    --clr-system-success: #22C55E;
+    --clr-system-warning: #FFBA08;
+    --clr-system-info: #4C82F7;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.container {
+    margin: auto; 
+    padding-inline: 1rem; 
+}
+
 /* --- SMALL DESKTOP SCREEN */
 
 @media (min-width: 992px) {
@@ -14,8 +53,8 @@
     }
 
     .header-container {
-        grid-template-columns: 1fr 1fr 5fr 1fr;
-        padding: 0rem 1rem 0 1rem;
+        grid-template-columns: 1fr 1fr 4fr 1fr;
+        padding: .5remrem 1rem 0 1rem;
     }
 
     #feature-menu {
@@ -38,6 +77,10 @@
         justify-self: end;
         grid-column: 4/5;
         text-decoration: none;
+        background-color: var(--clr-primary);
+        padding: .3rem 1rem;
+        color: white;
+        border-radius: 6px;
 
         i {
             padding: .5rem;
@@ -55,8 +98,8 @@
     #p-1 {
         display: grid;
         margin: 0;
-        grid-template-columns: 1fr 1fr 3fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr 2fr 4fr;
+        grid-template-rows: auto 1fr 1fr 2fr;
         align-items: center; 
         justify-content: space-evenly;
     }
@@ -64,10 +107,10 @@
     #headline {
         grid-row: 1/2;
         grid-column: 1/3;
-        font-size: 2.6rem;
+        font-size: 3.2rem;
         text-align: left;
         margin-top: 5rem;
-        
+        margin-left: 0;
     }
         
     #teaser {
@@ -75,6 +118,7 @@
         grid-column: 1/3; 
         width: auto;
         text-align: left;
+        align-self: flex-start;
         font-size: 1.1rem;
         margin-bottom: 2rem;
     }
@@ -82,12 +126,14 @@
 
     #apple {
         justify-self: center;
+        align-self: flex-start;
         grid-row: 3/4;
         grid-column: 1 / 2;
     }
 
     #google {
-        justify-self: center;
+        justify-self: start;
+        align-self: flex-start;
         grid-row: 3/4;
         grid-column: 2 / 3;
     }
@@ -117,15 +163,19 @@
     #discover {
         grid-row: 4/5;
         grid-column: 1/3;
-        justify-self: center;
+        justify-self: start;
+        margin-left: 0;
+
+        .down-btn {
+            margin: 0;
+        }
     }
     
     #img-co-1 {
         display: flex;
         align-self: flex-end;
         justify-self: flex-end;
-        padding-top: 4rem;
-        width: 90%;
+        width: 100%;
         height: auto;
         grid-row: 1/5;
         grid-column: 3/4;
@@ -145,6 +195,50 @@
     
             .logo-lrg {
                 display: flex;
+            }
+        }
+    }
+
+    #page-2 {
+        #p-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: auto;
+            margin-bottom: 6rem;
+            margin-top: 6rem;
+
+            
+            #side-view {
+                display: block;
+                width: 20vw;
+                height: auto; 
+                
+                    #side-phone {
+                        object-fit: contain;
+                        width: 100%;
+                    }
+            }
+
+            #text-content {
+                display: block;
+                width: 40vw;
+                justify-content: end;
+                margin: 0;
+                padding: 0;
+
+                .textpage {
+                    #app-features {
+                        align-self: start;
+                        font-size: 2.5rem;
+                    }
+
+                    .lrg-p {
+                        text-align: left;
+                    }
+                    
+                }
             }
         }
     }

@@ -220,6 +220,10 @@ header {
 }
 
 /* PAGE 2 */
+#side-view {
+    display: none;
+}
+
 .textpage {
     margin-bottom: 2rem;
     display: flex;
