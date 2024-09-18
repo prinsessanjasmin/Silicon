@@ -204,7 +204,7 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            gap: 2rem;
+            gap: 1rem;
             margin: auto;
             margin-bottom: 6rem;
             margin-top: 6rem;
@@ -212,8 +212,9 @@ body {
             
             #side-view {
                 display: block;
-                width: 20vw;
+                width: 22vw;
                 height: auto; 
+                align-self: flex-end;
                 
                     #side-phone {
                         object-fit: contain;
@@ -232,6 +233,7 @@ body {
                     #app-features {
                         align-self: start;
                         font-size: 2.5rem;
+                        
                     }
 
                     .lrg-p {
@@ -240,6 +242,188 @@ body {
                     
                 }
             }
+            
+            .app-feature-container {
+                gap: 2rem;
+            }
         }
     }
+
+    #page-3 {
+        .text-item {
+            font-size: 2.5rem;
+        }
+
+        #three-displays {
+        gap: 4rem;
+            #first-phone {
+                width: 16vw;
+            }
+            #iphone-montage {
+                width: 18vw;
+            }
+            #third-phone {
+                width: 16vw;
+            }
+        }
+
+        #transfer-tablet {
+            display: none;
+        }
+
+        #transfer-desktop {
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+        }    
+
+        p {
+            max-width: 40vw;
+            margin: auto;
+        }
+
+    }
+
+    /* --- PAGE 4 --- */
+    #page-4 {
+        display: block;
+    }
+
+    .p4-flex {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 6rem auto;
+    }
+
+    li {
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+    }
+
+    .p4-ul-2 {
+        flex-direction: row;
+    }
+
+    .p4-li-2 {
+        flex-direction: column;
+    }
+
+    /* --- PAGE 5 --- */
+    #page-5 {
+        display: block;
+        background-color: var(--clr-gray-100);
+    }
+
+    #p-5 {
+        display: flex;
+    }
+
+    /* --- PAGE 6 --- */
+    #page-6 {
+        .text-item {
+            width: 50vw; 
+            margin: auto;
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    /* ---CONTACT SECTION--- */
+
+
+
+    #button-container {
+        display: none;
+    }
+
+    #contact-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 45vw;
+        padding: 2rem;
+        gap: 1rem;
+        text-align: left;
+        border: 1px solid var(--clr-gray-500);
+        border-radius: 6px;
+
+            a {
+                text-decoration: none;
+                font-weight: 600;
+                color: var(--clr-primary);
+            }
+        }
+
+        #message-contact {
+            color: var(--clr-system-success);
+        }
+    }
+
+    /* --- SUBSCRIBE --- */
+    #subscribe-container {
+        max-width: 720px;
+        margin: auto;
+        padding: 4rem 0;
+        
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    #bell-sub {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+    }
+    
+    #subscribe-text {
+        font-weight: 900;
+        width: 200px;
+      }
+    
+    #input-div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;    
+    }
+    
+    #email-input {
+        height: 50px;
+        width: 215px;
+        border: 1px solid var(--clr-gray-400);
+        border-radius: 6px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    #email-input::placeholder {
+        font-family: "Manrope", sans-serif;
+        padding: .5rem;
+        color: var(--clr-gray-500)
+    }
+    
+    #sub-btn {
+        width: 77px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+
+    /* --- FOOTER --- */
+    .footer-class {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }    
+}
+
 }

@@ -69,6 +69,7 @@ body {
     #headline {
         grid-row: 1/2;
         grid-column: 1/4;
+        font-size: 2.75rem;
     }
         
     #teaser {
@@ -178,7 +179,6 @@ body {
     /* --- PAGE 3 --- */
 
     #p-3 {
-        background-color: var(--clr-gray-100);
         margin-top: 2rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -229,17 +229,27 @@ body {
         display: inline;
     }
 
-    #transfers {
+    #transfer-tablet {
         display: flex; 
         flex-direction: column;
         gap: 1rem;
         margin: 1rem 7rem;
     }
+    
+}
+/* --- PAGE 4 --- */
+#page-4 {
+    display: none;
+}
+
+/* --- PAGE 5 --- */
+#page-5 {
+    display: none;
 }
 
 /* --- FAQ Section --- */
 
-#page-4 {
+#page-6 {
     .text-item {
         width: 50vw; 
         margin: auto;
