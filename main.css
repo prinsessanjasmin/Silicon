@@ -456,7 +456,7 @@ nav {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content:space-between;
+        justify-content: space-between;
         cursor: pointer;
         padding: 18px;
         width: 100%;
@@ -537,10 +537,6 @@ nav {
         display: none;
     }
 }
-
-
-
-
 
    
 /* --- SUBSCRIBE --- */
@@ -837,7 +833,7 @@ nav {
     
 
         #button-container {
-        display: none;
+            display: none;
         }
 
         #contact-container {
@@ -845,22 +841,22 @@ nav {
             flex-direction: row;
             gap: 1rem;
 
-        .card {
-            display: flex;
-            flex-direction: column;
-            width: 45vw;
-            padding: 2rem;
-            gap: 1rem;
-            text-align: left;
-            border: 1px solid var(--clr-gray-500);
-            border-radius: 6px;
+            .card {
+                display: flex;
+                flex-direction: column;
+                width: 45vw;
+                padding: 2rem;
+                gap: 1rem;
+                text-align: left;
+                border: 1px solid var(--clr-gray-500);
+                border-radius: 6px;
 
-                a {
-                    text-decoration: none;
-                    font-weight: 600;
-                    color: var(--clr-primary);
+                    a {
+                        text-decoration: none;
+                        font-weight: 600;
+                        color: var(--clr-primary);
+                    }
                 }
-            }
 
             #message-contact {
                 color: var(--clr-system-success);
@@ -1322,40 +1318,77 @@ nav {
         }
     }
 
-    /* ---CONTACT SECTION--- */
+        
 
+    #page-6 {
 
+        #p-6 {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 3fr 4fr;
+            grid-template-rows: 1fr 2fr;
+            
 
-    #button-container {
-        display: none;
-    }
+            .text-item {
+                width: auto; 
+                margin: auto;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                
+                h3 {
+                    font-size: 2rem;
+                    text-align: left;
+                }
 
-    #contact-container {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-
-    .card {
-        display: flex;
-        flex-direction: column;
-        width: 45vw;
-        padding: 2rem;
-        gap: 1rem;
-        text-align: left;
-        border: 1px solid var(--clr-gray-500);
-        border-radius: 6px;
-
-            a {
-                text-decoration: none;
-                font-weight: 600;
-                color: var(--clr-primary);
+                p {
+                    text-align: left;
+                }
             }
-        }
 
-        #message-contact {
-            color: var(--clr-system-success);
-        }
+            .collapse-faq {
+                grid-column: 2/3;
+                grid-row: 1/3;
+            }
+
+            #contact-container {
+                align-content: flex-start;
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                grid-column: 1/2;
+                grid-row: 2/3;
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    width: auto;
+                    padding: 2rem;
+                    gap: 1rem;
+                    text-align: left;
+                    border: 1px solid var(--clr-gray-500);
+                    border-radius: 6px;
+
+                        a {
+                            text-decoration: none;
+                            font-weight: 600;
+                            color: var(--clr-primary);
+                        }
+                    }
+
+                    #message-contact {
+                        color: var(--clr-system-success);
+                    }
+                }
+
+            #button-container {
+            display: none;
+            }
+
+           
     }
+
 
     /* --- SUBSCRIBE --- */
     #subscribe-container {
@@ -1412,9 +1445,6 @@ nav {
 
     /* --- FOOTER --- */
     .footer-class {
-        display: flex;
-        flex-direction: row;
-        margin: auto;
     }    
 
 }
