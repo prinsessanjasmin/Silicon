@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
+    --clr-white: #FFFFFF;
     --clr-gray-100: #F3F6FF;
-    --clr-gray-200: #FFFFFF;
+    --clr-gray-200: #EFF2FC;
     --clr-gray-300: #E2E5F1;
     --clr-gray-400: #D4D7E5;
     --clr-gray-500: #B4B7C9;

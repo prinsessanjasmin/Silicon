@@ -1,4 +1,26 @@
 /* TYPOGRAPHY MOBILE*/
+:root {
+    --clr-white: #FFFFFF;
+    --clr-gray-100: #F3F6FF;
+    --clr-gray-200: #EFF2FC;
+    --clr-gray-300: #E2E5F1;
+    --clr-gray-400: #D4D7E5;
+    --clr-gray-500: #B4B7C9;
+    --clr-gray-600: #9397AD;
+    --clr-gray-700: #565973;
+    --clr-gray-800: #33354D;
+    --clr-gray-900: #0B0F19;
+
+    --clr-primary: #6366F1;
+    --clr-gradient: linear-gradient(90deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.15) 50%, rgba(217, 70, 239, 0.15) 100%);
+
+    --clr-system-error: #EF4444; 
+    --clr-system-success: #22C55E;
+    --clr-system-warning: #FFBA08;
+    --clr-system-info: #4C82F7;
+}
+
+
 h1 {
     font-size: 2.2rem;
     font-weight: 800;
@@ -48,4 +70,9 @@ p {
 .lrg-p {
     font-size: 1.1rem;
     text-align: center;
+}
+
+.sm-p {
+    font-size: .9px;
+    color: var(--clr-gray-600);
 }
