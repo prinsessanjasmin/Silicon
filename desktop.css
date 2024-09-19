@@ -21,22 +21,6 @@
     --clr-system-info: #4C82F7;
 }
 
-* {
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
-    /* border: 1px solid red; */
-}
-
-body {
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
-}
-
-.container {
-    margin: auto; 
-    padding-inline: 1rem; 
-}
 
 /* --- SMALL DESKTOP SCREEN */
 
@@ -483,7 +467,7 @@ body {
     #subscribe-text {
         font-weight: 900;
         width: 200px;
-      }
+    }
     
     #input-div {
         display: flex;
@@ -520,6 +504,4 @@ body {
         flex-direction: row;
         margin: auto;
     }    
-}
-
 }
