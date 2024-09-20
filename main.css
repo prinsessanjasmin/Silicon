@@ -529,6 +529,7 @@ nav {
 #contact-container {
     margin-bottom: 2rem;
     display: none;
+    padding: 0;
 
     #card-1, #card-2 {
         border: 1px solid var(--clr-gray-500);
@@ -850,21 +851,20 @@ nav {
         /* ---CONTACT SECTION--- */
     
 
-        #button-container {
-            display: none;
-        }
-
         #contact-container {
             display: flex;
             flex-direction: row;
+            width: 100%;
             gap: 1rem;
+            align-self: start;
+            justify-content: space-between;
 
             .card {
                 display: flex;
                 flex-direction: column;
-                width: 40vw;
+                flex: 1;
                 margin: auto;
-                padding: 2rem;
+                padding: 1rem;
                 gap: 1rem;
                 text-align: left;
                 border: 1px solid var(--clr-gray-500);
@@ -880,6 +880,11 @@ nav {
             #message-contact {
                 color: var(--clr-system-success);
             }
+
+            
+        }
+        #button-container {
+            display: none;
         }
     }
 
@@ -1356,16 +1361,17 @@ nav {
             margin-top: 4rem;
             margin-bottom: 4rem;
             display: grid;
+            grid-template-columns: 4fr 5fr;
+            grid-template-rows: 2fr 2fr 2fr;
+            gap: 4rem;
             
-            grid-template-columns: auto auto;
-            grid-template-rows: auto auto;
-            gap: 2rem;
         
             .text-item {
                 width: auto; 
                 margin: auto;
                 grid-column: 1/2;
                 grid-row: 1/2;
+                justify-content: center;
                 
                 h3 {
                     font-size: 2rem;
@@ -1378,14 +1384,17 @@ nav {
     
             .collapse-faq {
                 grid-column: 2/3;
-                grid-row: 1/3;
+                grid-row: 1/4;
             }
     
             #contact-container {
                 grid-column: 1/2;
                 grid-row: 2/3;
+                align-self: start; 
+                justify-content: space-between;
+
                 .card {
-                    width: auto;
+                    min-height: max-content;
                 }
             }
         }
