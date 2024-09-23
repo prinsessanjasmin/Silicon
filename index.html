@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="darkmode">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,23 +11,40 @@
     <div id="wrapper">
         <nav aria-label="main-navigation" class="main-navigation">
             <div class="header-container container">
-                <a href="index.html"><img src="/Logos/Silicon.svg" alt="Silicon logotype"></a>
-                <a href="#" id="feature-menu">Features</a>
-                <div class="toggle-switch-button">
-                    <span class="toggle-switch-label">Dark Mode</span>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label> 
-                    <!-- ovan kopierat från w3schools -->
+                <div id="silicon-logo">
+                    <a id="s-logo" href="index.html">
+                        <img src="/Logos/Silicon.svg" alt="Silicon logotype">
+                    </a>
+                    <a id="s-text" href="index.html">
+                        <h5>Silicon</h5>
+                    </a>
                 </div>
-                <a href="#" id="signin-button">
-                    <i class="fa-regular fa-user"></i>
-                    <span>Sign in / up</span>
-                </a> 
-                <button class="hamburger-menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+                <ul class="nav-list">
+                    <li class="nav-list-item" id="feature-menu-li">
+                        <a href="#" id="feature-menu">Features</a>
+                    </li>
+                    <li class="nav-list-item" id="toggle-switch-li">
+                        <div class="toggle-switch-button">
+                            <span class="toggle-switch-label">Dark Mode</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label> 
+                            <!-- ovan kopierat från w3schools -->
+                        </div>
+                    </li>
+                    <li class="nav-list-item" id="signin-btn-li">
+                        <a href="#" class="button" id="signin-button">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Sign in / up</span>
+                        </a> 
+                    </li>
+                    <li class="nav-list-item" id="hamburger-li">
+                        <button class="hamburger-menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
         </nav>
 
