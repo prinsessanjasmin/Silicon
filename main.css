@@ -11,6 +11,7 @@
     --clr-gray-700: #565973;
     --clr-gray-800: #33354D;
     --clr-gray-880: hsl(223, 39%, 11%);
+    --clr-gray-890: hsl(223, 39%, 5%);
     --clr-gray-900: #0B0F19;
 
     --clr-primary: #6366F1;
@@ -677,7 +678,7 @@ input:checked + .slider:before {
 
 .darkmode {
     --clr-background: var(--clr-gray-900);
-    --clr-background-gray: var(--clr-gray-880);
+    --clr-background-gray: var(--clr-gray-890);
 
     --clr-text-headlines: var(--clr-white);
     --clr-text-body: var(--clr-gray-500);
@@ -729,7 +730,6 @@ input:checked + .slider:before {
     
     .container {
         max-width: 720px;
-        margin: auto;
     }
     
     #silicon-logo {
@@ -1102,6 +1102,7 @@ input:checked + .slider:before {
             border: .5px solid var(--clr-gray-800);
             /* background-color: var(--clr-gradient); */
         }   
+
     }
 }
 
@@ -1628,6 +1629,14 @@ input:checked + .slider:before {
     }
 
     .darkmode {
+        
+        #page-5 {
+            #p-5 {
+                .text-box {
+                    background-color: var(--clr-gray-880);
+                }
+            }
+        }
 
     }
 }
