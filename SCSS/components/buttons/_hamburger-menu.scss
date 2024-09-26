@@ -1,0 +1,18 @@
+.hamburger-menu {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    
+    &::before {
+        @include font-awesome-icon("\f0c9"); 
+        color: var(--clr-text-body);
+        font-size: 1.5rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);  /* Centering the icon */
+    }
+}

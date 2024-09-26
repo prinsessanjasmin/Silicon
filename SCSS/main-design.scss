@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import "./mixins/mixins";
+@import "./misc/base";
+@import "./components/components";
+@import "./colors/colors";
+
+body {
+  @include text;
+}
+
+a, span, li, input, textarea, button {
+  @include text;
+}

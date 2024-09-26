@@ -1,0 +1,21 @@
+.down-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--clr-primary);
+    color: var(--clr-text-body);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    margin: 1rem;
+
+    &::before {
+        @include font-awesome-icon("\f078");  // Unicode for chevron-down
+        color: var(--clr-white);
+        font-size: 1rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);  /* Centering the icon */
+    }
+}

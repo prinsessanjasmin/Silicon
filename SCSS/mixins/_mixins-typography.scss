@@ -5,8 +5,17 @@
     font-style: normal;
 }
 
+@mixin font-awesome-icon($icon-unicode) {
+    font-family: "Font Awesome 6 Free";  // Specify the Font Awesome font family
+    font-weight: 900;                    // Ensure the solid icons are used
+    content: $icon-unicode;              // Use the Unicode passed into the mixin
+    display: inline-block;
+    font-style: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
 @mixin heading {
     @include text; 
-
     font-weight: 900; 
 }

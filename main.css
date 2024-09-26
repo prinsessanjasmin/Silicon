@@ -58,6 +58,7 @@ body {
     border: none; 
     border-radius: 6px;
     color: var(--clr-white);
+    font-family: "Manrope", sans-serif;
 }
 
 /* --- TYPOGRAPHY --- */
