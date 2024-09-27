@@ -1,0 +1,101 @@
+#page-4 {
+    display: none;
+
+    
+    @include respond-to('large') {
+        display: block;
+
+        #p-4 {
+            max-width: 1140px;
+            display: flex;
+            flex-direction: column;
+
+            .p4-flex {
+                display: flex;
+                flex-direction: row;
+                gap: 7rem;
+                margin: 4rem;
+                align-items: center;
+            }
+        
+            .p4-text {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                justify-content: left;
+                
+                h2 {
+                    text-align: left;
+                }
+            }
+
+            .p4-li-1 {
+                margin-bottom: 1rem;
+
+                i {
+                    color: var(--clr-primary);
+                }
+
+                p {
+                    text-align: left;
+                }
+            }
+
+            #p4-img-1 {
+                position: relative;
+        
+                #scr-1 {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    z-index: -1;
+                }
+        
+                #scr-2 {
+                    position: absolute;
+                    z-index: 2;
+                    bottom: -60px;
+                    right: -40px;
+                }
+            }
+        
+            #p4-img-2 {
+                position: relative;
+        
+                #scr-3 {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    z-index: -1;
+                }
+        
+                #scr-visa {
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 70px;
+                    right: -40px;
+                }
+            }
+        
+            li {
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+            }
+        
+            .p4-ul-2 {
+                display: flex;
+                flex-direction: row;
+                gap: 3rem;
+            }
+        
+            .p4-li-2 {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+
+

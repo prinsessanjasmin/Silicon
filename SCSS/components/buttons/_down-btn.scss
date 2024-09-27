@@ -19,3 +19,15 @@
         transform: translate(-50%, -50%);  /* Centering the icon */
     }
 }
+
+.down-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--clr-background);
+    color: var(--clr-text-body);
+    border: none;
+    cursor: pointer;
+    position: relative(40vw);
+    margin: 1rem;
+}

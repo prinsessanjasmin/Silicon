@@ -1,0 +1,22 @@
+.footer-class {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: .2em; 
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        padding: 1rem; 
+    }
+
+    .footer {
+        font-size: .9rem;
+        color: var(--clr-gray-600);
+    }
+}
+
+

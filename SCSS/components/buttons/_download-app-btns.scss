@@ -1,5 +1,21 @@
 .download-button {
+    border-radius: 6px;
     background-color: var(--clr-gray-900);
     width: 90vw;
     height: 53px;
+}
+
+.btn-pic {
+    width: 88vw;
+    height: 50px;
+    align-items: center;
+    object-fit: none;
+}
+
+#apple-pic-dark {
+    display: none;
+}
+
+#google-pic-dark {
+    display: none;
 }

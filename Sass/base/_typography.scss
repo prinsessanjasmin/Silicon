@@ -1,3 +1,11 @@
+/* --- TYPOGRAPHY --- */
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    background-color: var(--clr-background);
+    color: var(--clr-text-body);
+}
 
 h1, h2, h3 {
     font-weight: 900;
@@ -7,7 +15,7 @@ h1, h2, h3 {
     line-height: 130%;
     text-wrap: balance;
 
-    @include desktop {
+    @include respond-to('large') {
         text-align: left;
     }
 }
@@ -65,6 +73,5 @@ p {
 }
 
 span {
-    color: var(--clr-text-body);
-    font-size: inherit;
+    color: var(--clr-text-headlines);
 }

@@ -5,10 +5,975 @@
 @import "./components/components";
 @import "./colors/colors";
 
-body {
-  @include text;
+
+
+/* PAGE 2 */
+#side-view {
+    display: none;
 }
 
-a, span, li, input, textarea, button {
-  @include text;
+.textpage {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
 }
+
+.app-feature-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-feature-li {
+    list-style: none;
+    display: inline-flex;
+    padding: .5rem;
+    align-items: start;
+    gap: 1em;
+    
+    .icon-holder {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+    }
+    
+    img {
+        height: 60px;
+        width: 60px;
+        object-fit: contain;
+    }
+    
+    p {
+        padding: 8px 0;
+    }
+}
+
+
+
+#p-3 {
+    
+    #first-phone {
+        display: none;
+    }
+    
+    #third-phone {
+        display: none;
+    }
+    
+    #iphone-montage {
+        display: flex;
+        width: 70vw;
+        margin: 2rem auto;
+        height: auto; 
+        /* justify-self: center; */
+        position: relative;
+        
+        #iphone-3 {
+            place-self: center;
+            object-fit: contain;
+            width: 100%;
+            position: relative;
+        }
+        
+        #modified-screen {
+            margin: auto;
+            width: 100%;
+            object-fit: contain;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+    
+    .text-item {
+        margin: 0 .5rem;
+        text-align: center;
+    }
+    
+    #three-displays {
+        margin: auto;
+    }
+    
+    #transfers {
+        #step-3 {
+            display: none;
+        }
+        
+        #transfer-desktop {
+            display: none;
+        }
+    }
+    
+}
+
+
+/* ---PAGE 6--- */
+
+#p-6 { 
+    .text-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .collapse-faq {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .faq {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+   
+
+#button-container {
+    width: auto;
+    margin-bottom: 2rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* --- SUBSCRIBE --- */
+
+
+#bell-sub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+#subscribe-text {
+    font-weight: 900;
+    
+    span {
+        display: none;
+    }
+}
+
+#input-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;    
+}
+
+#email-input {
+    height: 50px;
+    width: 230px;
+    border: 1px solid var(--clr-gray-400);
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#email-input::placeholder {
+    font-size: 1rem;
+    padding: .5rem;
+    color: var(--clr-gray-500);
+}
+
+#sub-btn {
+    width: 100px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+
+.darkmode {
+    --clr-background: var(--clr-gray-900);
+    --clr-background-gray: var(--clr-gray-890);
+
+    --clr-text-headlines: var(--clr-white);
+    --clr-text-body: var(--clr-gray-500);
+    --clr-text-body-600: var(--white);
+
+
+    .download-button {
+        background-color: var(--clr-gray-100);
+
+        #apple-pic-dark {
+            display: block;
+        }
+        
+        #google-pic-dark {
+            display: block;
+        }
+    
+        #apple-pic {
+            display: none;
+        }
+        
+        #google-pic {
+            display: none;
+        }
+    }  
+
+    #p-6 {
+        .collapsible {
+            border: .05px solid var(--clr-gray-800);
+            p {
+                color: var(--clr-white);
+            }
+
+            #down-arrow {
+                color: var(--clr-white);
+            }
+        }
+        
+        .content {
+            border: .05px solid var(--clr-gray-800);
+        }
+    }
+}
+
+
+/* MEDIA QUERIES */
+/* --- TABLET SCREEN --- */
+@media (min-width: 768px) {
+    
+
+    
+    #feature-menu {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--clr-gray-800);
+        text-decoration: none;
+        cursor: pointer;
+        display: none;
+    }
+    
+
+    .toggle-switch-label {
+        display: inline;
+        padding-right: 1rem;
+    }
+    
+    
+   
+
+    #headline {
+        grid-row: 1/2;
+        grid-column: 1/4;
+        font-size: 2.75rem;
+    }
+        
+    #teaser {
+        grid-row: 3/4;
+        grid-column: 1/3; 
+        width: auto;
+        text-align: left;
+        margin: 0;
+    }
+    
+    #apple {
+        justify-self: end;
+        grid-row: 4/5;
+        grid-column: 1 / 2;
+    }
+
+    #google {
+        justify-self: end;
+        grid-row: 4/5;
+        grid-column: 2 / 3;
+    }
+
+    .download-button {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-pic {
+        object-fit: contain;
+        width: 90%;
+    }
+
+    #apple-box {
+        display: flex;
+        width: 126px;
+        height: 44px;
+    }
+
+    #google-box {
+        display: flex;
+        width: 138px;
+        height: 44px;
+    }
+
+    #discover {
+        grid-row: 5/6;
+        grid-column: 1/3;
+        justify-self: left;
+    }
+    
+    #img-co-1 {
+        display: flex;
+        align-self: flex-end;
+        width: 54vw;
+        height: auto;
+        grid-row: 2/6;
+        grid-column: 3/4;
+    }
+
+    #ip-1 {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        object-fit: contain;  
+    }
+    
+    
+
+    
+
+    /* PAGE 2 */
+    .app-feature-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* --- PAGE 3 --- */
+
+    #p-3 {
+        .text-item {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    
+
+    #three-displays {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-evenly;
+        align-items: center;
+
+        #first-phone {
+            display: block;
+            width: 23vw;
+
+            img {
+                justify-self: center;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        #iphone-montage {
+            margin: 0;
+            width: 25vw;
+        }
+
+        #third-phone {
+            display: block;
+            width: 23vw;
+
+            img {
+                justify-self: center;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+        #transfers {
+            width: 65vw;
+            padding: 2rem 0;
+            margin: auto;
+            text-align: center;
+            text-wrap: balance;
+
+            #transfer-tablet {
+                display: inline;
+                margin: auto;
+                padding: 0;
+                
+                #step-3 {
+                    display: inline;
+                    color: var(--clr-text-headlines);
+                }
+            }
+
+            p {
+                padding-top: 1rem;
+            }
+        }
+    }
+
+
+    /* --- FAQ Section --- */
+
+    #page-6 {
+        #p-6 {
+            .text-item {
+                width: 50vw; 
+                margin: auto;
+    
+                h3 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        
+
+        /* ---CONTACT SECTION--- */
+    
+
+        #contact-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            gap: 1rem;
+            align-self: start;
+            justify-content: space-between;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                margin: auto;
+                padding: 1rem;
+                gap: 1rem;
+                text-align: left;
+                border: 1px solid var(--clr-gray-500);
+                border-radius: 6px;
+
+                    a {
+                        text-decoration: none;
+                        font-weight: 600;
+                        color: var(--clr-primary);
+                    }
+                }
+
+            #message-contact {
+                color: var(--clr-system-success);
+            }
+
+            
+        }
+        #button-container {
+            display: none;
+        }
+    }
+
+    /* --- SUBSCRIBE --- */
+    #subscribe-container {
+        margin: auto;
+        padding: 4rem 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    #bell-sub {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+    }
+    
+    #subscribe-text {
+        font-weight: 900;
+        width: 200px;
+        
+    }
+    
+    #input-div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;    
+    }
+    
+    #email-input {
+        height: 50px;
+        width: 215px;
+        border: 1px solid var(--clr-gray-400);
+        border-radius: 6px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    #email-input::placeholder {
+        padding: .5rem;
+        color: var(--clr-gray-500)
+    }
+    
+    #sub-btn {
+        width: 77px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+        
+
+    .darkmode {
+        #teaser {
+            color: var(--clr-text-body-600);
+        }
+
+        #logo-section .logo-holder {
+            border: .5px solid var(--clr-gray-800);
+            background-color: var(--clr-gradient); 
+        }   
+
+    }
+}
+
+/* --- SMALL DESKTOP SCREEN --- */
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* --- LARGE DESKTOP SCREEN ---- */
+
+@media (min-width: 1200px) {
+    
+
+    #feature-menu-li {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-self: left;
+    }
+
+    #toggle-switch-li {
+       grid-column: 2/3;
+       grid-row: 1/2;
+    }
+    
+  
+    #signin-btn-li {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+
+
+    /* --- PAGE ONE --- */
+
+    
+
+
+    #headline {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        font-size: 3.2rem;
+        text-align: left;
+        margin-top: 5rem;
+        margin-left: 0;
+    }
+        
+    #teaser {
+        grid-row: 2/3;
+        grid-column: 1/3; 
+        width: auto;
+        text-align: left;
+        align-self: flex-start;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    #apple {
+        justify-self: center;
+        align-self: flex-start;
+        grid-row: 3/4;
+        grid-column: 1 / 2;
+    }
+
+    #google {
+        justify-self: start;
+        align-self: flex-start;
+        grid-row: 3/4;
+        grid-column: 2 / 3;
+    }
+
+    .download-button {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-pic {
+        object-fit: contain;
+        width: 90%;
+    }
+
+    #apple-box {
+        display: flex;
+        width: 180px;
+        height: 52px;
+    }
+
+    #google-box {
+        display: flex;
+        width: 180px;
+        height: 52px;
+    }
+
+    #discover {
+        grid-row: 4/5;
+        grid-column: 1/3;
+        justify-self: start;
+        margin-left: 0;
+
+        .down-btn {
+            margin: 1rem;
+        }
+    }
+    
+    #img-co-1 {
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+        width: 100%;
+        height: auto;
+        grid-row: 1/5;
+        grid-column: 3/4;
+    }
+
+
+
+    #page-2 {
+        #p-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10rem;
+            margin: auto;
+            margin-bottom: 6rem;
+            margin-top: 6rem;
+
+            
+            #side-view {
+                display: block;
+                width: 22vw;
+                height: auto; 
+                align-self: flex-end;
+                
+                #side-phone {
+                    object-fit: contain;
+                    width: 100%;
+                }
+            }
+
+            #text-content {
+                display: block;
+                width: 40vw;
+                justify-content: end;
+                margin: 0;
+                padding: 0;
+
+                .textpage {
+                    margin-bottom: 4rem;
+
+                    #app-features {
+                        align-self: start;
+                        font-size: 2.5rem;
+                    }
+
+                    .lrg-p {
+                        text-align: left;
+                    }  
+                }
+            }
+            
+            .app-feature-container {
+                gap: 2rem;
+            }
+        }
+    }
+
+    #p-3 {
+        
+        
+        .text-item {
+            h2 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            
+        }
+
+        #three-displays {
+            max-width: 1140px;
+            padding: 2rem;
+            gap: 6rem;
+            margin: auto;
+
+            #first-phone {
+                width: 16vw;
+            }
+            #iphone-montage {
+                width: 18vw;
+            }
+            #third-phone {
+                width: 16vw;
+            }
+            
+        }
+
+        
+        
+        #transfers {
+            display: block;
+            width: 100%;
+            margin: auto;
+
+            #transfer-tablet {
+                display: none;
+            }
+
+            #step-3 {
+                display: none;
+            }
+    
+            #transfer-desktop {
+                display: block;
+                margin-top: 1rem;
+                font-size: 1.5rem;
+            }
+
+            p {
+                max-width: 40vw;
+                margin: auto;
+            }
+        } 
+    }
+
+    /* --- PAGE 4 --- */
+    #page-4 {
+        #p-4 {
+            .p4-flex {
+                display: flex;
+                flex-direction: row;
+                gap: 7rem;
+                margin: 4rem;
+                align-items: center;
+            }
+        
+            .p4-text {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                justify-content: left;
+                
+                h2 {
+                    text-align: left;
+                }
+            }
+
+            .p4-li-1 {
+                margin-bottom: 1rem;
+
+                i {
+                    color: var(--clr-primary);
+                }
+
+                p {
+                    text-align: left;
+                }
+            }
+
+            #p4-img-1 {
+                position: relative;
+        
+                #scr-1 {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    z-index: -1;
+                }
+        
+                #scr-2 {
+                    position: absolute;
+                    z-index: 2;
+                    bottom: -60px;
+                    right: -40px;
+                }
+            }
+        
+            #p4-img-2 {
+                position: relative;
+        
+                #scr-3 {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    z-index: -1;
+                }
+        
+                #scr-visa {
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 70px;
+                    right: -40px;
+                }
+            }
+        
+            li {
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+            }
+        
+            .p4-ul-2 {
+                display: flex;
+                flex-direction: row;
+                gap: 3rem;
+            }
+        
+            .p4-li-2 {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+
+    /* --- PAGE 5 --- */
+    #page-5 {
+        #p-5 {
+
+            #p-5-text {
+                min-width: 20vw;
+                h2 {
+                    text-align: left;
+                    font-size: 2rem;
+                    padding-right: 2rem;
+                }  
+            }
+    
+            .text-box {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                
+                background-color: var(--clr-background);
+                border: none;
+                border-radius: 6px;
+                box-shadow: 0 4px 4px 0 rgba(11, 15, 25, 0.25);
+                padding: 2rem;
+                position: relative;
+
+                #quotes {
+                    position: absolute;
+                    top: -30px;
+                    left: 40px;
+                    transform: translateX(-50%);
+                    width: 60px; /* Adjust the size of the icon */
+                    height: auto;
+                }
+            }
+            
+            .stars {
+                color: var(--clr-system-warning);
+                text-align: left; 
+                margin: 0; 
+            }
+    
+            .reviewer-byline {
+                display: flex;
+                gap: 1rem;
+            }
+        }
+    }
+    
+    #page-6 {
+        #p-6 {
+
+            .text-item {
+                width: auto; 
+                margin: auto;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                justify-content: center;
+                
+                h3 {
+                    font-size: 2rem;
+                    text-align: left;
+                }
+                p {
+                    text-align: left;
+                }
+            }
+    
+            .collapse-faq {
+                grid-column: 2/3;
+                grid-row: 1/4;
+
+                .collapsible {
+                    margin-top: .5rem;
+                }
+            }
+    
+            #contact-container {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                align-self: start; 
+                justify-content: space-between;
+
+                .card {
+                    min-height: max-content;
+                }
+            }
+        }
+    }
+    
+    
+
+
+    /* --- SUBSCRIBE --- */
+    #subscribe-container {
+        padding: 4rem;
+        gap: 2rem;
+        
+        #subscribe-text {
+            width: auto;
+            text-align: left;
+
+            span {
+                display: inline;
+            }
+        }
+
+        #bell-container {
+            padding: 1rem;
+        }
+        
+        #email-input {
+            min-width: 350px;
+            background-color: var(--clr-white);
+        }
+                
+        #sub-btn {
+            width: 120px;
+        }
+    }
+
+    .darkmode {
+        
+        #page-5 {
+            #p-5 {
+                .text-box {
+                    background-color: var(--clr-gray-880);
+                }
+            }
+        }
+
+    }
+}}

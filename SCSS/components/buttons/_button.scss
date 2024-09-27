@@ -1,10 +1,6 @@
 .button {
-    width: auto;
-    padding: 0 3rem;
-    height: 2.5rem;
+    @include button;
     background-color: var(--clr-primary);
-    border: none; 
-    border-radius: 6px;
     color: var(--clr-white);
-    cursor: pointer;
+    
 }

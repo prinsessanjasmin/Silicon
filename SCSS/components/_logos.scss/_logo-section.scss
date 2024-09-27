@@ -1,0 +1,55 @@
+#logo-section {
+    display: none;
+
+    @include tablet {
+        #logo-section {
+            display: block;
+            
+            .logo-container {
+                margin-bottom: 3rem;
+                display: flex; 
+                align-items: center;
+                justify-content: space-evenly;
+                flex-direction: row;
+                gap: 1rem;
+            
+                .logo-holder {
+                    padding: 1.5rem 0.5rem;
+                    width: 130px;
+                    height: 90px;
+                    border: 2px solid var(--clr-gray-300);
+                    border-radius: .5em;
+    
+                    img {
+                        object-fit: contain;
+                        width: 100%;
+                        height: 100%;
+                        padding: .5em;   
+                    }
+                }
+    
+                .logo-lrg {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include desktop {
+        #logo-section {
+        
+            .logo-container {
+                margin-top: 3rem;
+    
+                .logo-holder {
+                    width: 180px;
+                    height: 90px;
+                }
+        
+                .logo-lrg {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

@@ -1,15 +1,21 @@
 #signin-button {
-    display: block;
-    height: 40px;
-    text-decoration: none;
-    background-color: var(--clr-primary);
-    padding: .3rem 1rem;
-    
-    i {
-        padding: .5rem;
-    }
+    display: none;
 
-    span {
-        color: var(--clr-white);
+    @include desktop {
+        #signin-button {
+            display: block;
+            height: 40px;
+            text-decoration: none;
+            background-color: var(--clr-primary);
+            padding: .3rem 1rem;
+            
+            i {
+                padding: .5rem;
+            }
+    
+            span {
+                color: var(--clr-white);
+            }
+        }
     }
 }

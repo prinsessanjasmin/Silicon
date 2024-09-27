@@ -1,0 +1,28 @@
+#silicon-logo {
+    display: inline-block;
+    width: 100%;
+    
+    #s-text {
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    
+    #s-logo {
+        display: inline-block;
+        vertical-align: middle; 
+        margin-right: 0.5rem;
+    }
+
+    @include tablet {
+        #silicon-logo {
+            width: 30%;
+        }
+    }
+
+    @include desktop {
+        #silicon-logo {
+            width: 15%;
+        }
+    }
+}

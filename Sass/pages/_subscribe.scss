@@ -1,0 +1,141 @@
+#subscribe-container {
+    background-color: var(--clr-background-gray);
+    margin: .5rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+}
+
+#bell-sub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+#subscribe-text {
+    font-weight: 900;
+    
+    span {
+        display: none;
+    }
+}
+
+#input-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;    
+}
+
+#email-input {
+    height: 50px;
+    width: 230px;
+    border: 1px solid var(--clr-gray-400);
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#email-input::placeholder {
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    padding: .5rem;
+    color: var(--clr-gray-500);
+}
+
+#sub-btn {
+    width: 100px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@include respond-to('large') {
+    max-width: 1140px;
+
+    
+        padding: 4rem;
+        gap: 2rem;
+        
+        #subscribe-text {
+            width: auto;
+            text-align: left;
+
+            span {
+                display: inline;
+            }
+        }
+
+        #bell-container {
+            padding: 1rem;
+        }
+        
+        #email-input {
+            min-width: 350px;
+            background-color: var(--clr-white);
+        }
+                
+        #sub-btn {
+            width: 120px;
+        }
+    }
+
+}
+
+
+@include respond-to('medium') {
+    max-width: 720px;
+
+    #subscribe-container {
+        margin: auto;
+        padding: 4rem 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    #bell-sub {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+    }
+    
+    #subscribe-text {
+        font-weight: 900;
+        width: 200px;
+        
+    }
+    
+    #input-div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;    
+    }
+    
+    #email-input {
+        height: 50px;
+        width: 215px;
+        border: 1px solid var(--clr-gray-400);
+        border-radius: 6px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    #email-input::placeholder {
+        padding: .5rem;
+        color: var(--clr-gray-500)
+    }
+    
+    #sub-btn {
+        width: 77px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

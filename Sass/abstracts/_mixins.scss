@@ -1,0 +1,7 @@
+@mixin respond-to($size) {
+    $breakpoint: map-get($breakpoints, $size); // Get the value from the map
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+  

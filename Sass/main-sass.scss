@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+@import "./themes/theme";
+@import "./themes/dark";
+
+@import "./components/components";
+
+@import "./layout/layout";
+
+@import "./pages/pages";
+
+
+
+/* ---PAGE 3--- */
+
+    #first-phone {
+        display: none;
+    }
+    
+    #third-phone {
+        display: none;
+    }
+    
+    #iphone-montage {
+        display: flex;
+        width: 70vw;
+        margin: 2rem auto;
+        height: auto; 
+        /* justify-self: center; */
+        position: relative;
+        
+        #iphone-3 {
+            place-self: center;
+            object-fit: contain;
+            width: 100%;
+            position: relative;
+        }
+        
+        #modified-screen {
+            margin: auto;
+            width: 100%;
+            object-fit: contain;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+    
+    #p-3 .text-item {
+        margin: 0 .5rem;
+        text-align: center;
+    }
+    
+    #three-displays {
+        margin: auto;
+    }
+    
+    #transfers {
+        #step-3 {
+            display: none;
+        }
+        
+        #transfer-desktop {
+            display: none;
+        }
+    }
+    
+}
+
+
+/* ---PAGE 6--- */
+    
+    #p-6 .text-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    
+   
+
+
+
+
+
+
+/* MEDIA QUERIES */
+/* --- TABLET SCREEN --- */
+@media (min-width: 768px) {
+    
+    .container {
+        max-width: 720px;
+    }
+    
+    
+    
+    // #p-1 {
+
+    
+    #apple {
+        justify-self: end;
+        grid-row: 4/5;
+        grid-column: 1 / 2;
+    }
+
+    #google {
+        justify-self: end;
+        grid-row: 4/5;
+        grid-column: 2 / 3;
+    }
+
+    .download-button {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-pic {
+        object-fit: contain;
+        width: 90%;
+    }
+
+    #apple-box {
+        display: flex;
+        width: 126px;
+        height: 44px;
+    }
+
+    #google-box {
+        display: flex;
+        width: 138px;
+        height: 44px;
+    }
+
+
+    
+    
+// p-3
+    
+
+    #three-displays {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-evenly;
+        align-items: center;
+
+        #first-phone {
+            display: block;
+            width: 23vw;
+
+            img {
+                justify-self: center;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        #iphone-montage {
+            margin: 0;
+            width: 25vw;
+        }
+
+        #third-phone {
+            display: block;
+            width: 23vw;
+
+            img {
+                justify-self: center;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+        #transfers {
+            width: 65vw;
+            padding: 2rem 0;
+            margin: auto;
+            text-align: center;
+            text-wrap: balance;
+
+            #transfer-tablet {
+                display: inline;
+                margin: auto;
+                padding: 0;
+                
+                #step-3 {
+                    display: inline;
+                    color: var(--clr-text-headlines);
+                }
+            }
+
+            p {
+                padding-top: 1rem;
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+/* --- LARGE DESKTOP SCREEN ---- */
+
+@media (min-width: 1200px) {
+    
+
+    /* --- PAGE ONE --- */
+
+    // #page-1 {
+        
+    // }
+
+    // #p-1 {
+  
+    #apple {
+        justify-self: center;
+        align-self: flex-start;
+        grid-row: 3/4;
+        grid-column: 1 / 2;
+    }
+
+    #google {
+        justify-self: start;
+        align-self: flex-start;
+        grid-row: 3/4;
+        grid-column: 2 / 3;
+    }
+
+    .download-button {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-pic {
+        object-fit: contain;
+        width: 90%;
+    }
+
+    #apple-box {
+        display: flex;
+        width: 180px;
+        height: 52px;
+    }
+
+    #google-box {
+        display: flex;
+        width: 180px;
+        height: 52px;
+    }
+
+    #discover {
+        // grid-row: 4/5;
+        // grid-column: 1/3;
+        // justify-self: start;
+        // margin-left: 0;
+
+        .down-btn {
+            margin: 1rem;
+        }
+    }
+    
+    #img-co-1 {
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+        width: 100%;
+        height: auto;
+        grid-row: 1/5;
+        grid-column: 3/4;
+    }
+
+
+   
+
+   
+
+    #p-3 {
+        // justify-content: center;
+        
+        .text-item {
+            h2 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            
+        }
+
+        #three-displays {
+            max-width: 1140px;
+            padding: 2rem;
+            gap: 6rem;
+            margin: auto;
+
+            #first-phone {
+                width: 16vw;
+            }
+            #iphone-montage {
+                width: 18vw;
+            }
+            #third-phone {
+                width: 16vw;
+            }
+            
+        }
+
+        
+        
+        #transfers {
+            display: block;
+            width: 100%;
+            margin: auto;
+
+            #transfer-tablet {
+                display: none;
+            }
+
+            #step-3 {
+                display: none;
+            }
+    
+            #transfer-desktop {
+                display: block;
+                margin-top: 1rem;
+                font-size: 1.5rem;
+            }
+
+            p {
+                max-width: 40vw;
+                margin: auto;
+            }
+        } 
+    }
+
+}
+

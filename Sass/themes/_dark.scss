@@ -1,0 +1,72 @@
+.darkmode {
+    --clr-background: var(--clr-gray-900);
+    --clr-background-gray: var(--clr-gray-890);
+
+    --clr-text-headlines: var(--clr-white);
+    --clr-text-body: var(--clr-gray-500);
+    --clr-text-body-600: var(--white);
+
+
+    .download-button {
+        background-color: var(--clr-gray-100);
+
+        #apple-pic-dark {
+            display: block;
+        }
+        
+        #google-pic-dark {
+            display: block;
+        }
+    
+        #apple-pic {
+            display: none;
+        }
+        
+        #google-pic {
+            display: none;
+        }
+    }  
+
+    #p-6 {
+        .collapsible {
+            border: .05px solid var(--clr-gray-800);
+            p {
+                color: var(--clr-white);
+            }
+
+            #down-arrow {
+                color: var(--clr-white);
+            }
+        }
+        
+        .content {
+            border: .05px solid var(--clr-gray-800);
+        }
+    }
+
+
+    @include respond-to('medium') {
+        max-width: 720px;
+        
+        #teaser {
+            color: var(--clr-text-body-600);
+        }
+
+        #logo-section .logo-holder {
+            border: .5px solid var(--clr-gray-800);
+            /* background-color: var(--clr-gradient); */
+        }   
+    }
+
+    @include respond-to('large') {
+        max-width: 1140px;
+        
+        #page-5 {
+            #p-5 {
+                .text-box {
+                    background-color: var(--clr-gray-880);
+                }
+            }  
+        }
+    }
+}

@@ -1,0 +1,26 @@
+#page-3 {
+    background-color: var(--clr-background-gray);
+
+#p-3 {
+
+    margin-top: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .text-item {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    @include respond-to('medium') {
+        max-width: 720px;
+    }
+
+    @include respond-to('large') {
+        max-width: 1140px;
+
+        justify-content: center;
+    }
+
+}
+}

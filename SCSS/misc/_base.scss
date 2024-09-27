@@ -14,5 +14,15 @@
 }
 
 body {
-    @include text; 
+    @include text;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    background-color: var(--clr-background);
+    color: var(--clr-text-body);
+
+    a, span, li, input, textarea, button {
+        @include text;
+      }
 }
+
+  

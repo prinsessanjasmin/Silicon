@@ -1,0 +1,81 @@
+@mixin button {
+    font-family: "Manrope", sans-serif;
+    border: none; 
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@mixin round-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    @include button;
+    width: 162px;
+    height: 50px;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+.down-btn {
+    @include round-button;
+    background-color: var(--clr-background);
+    color: var(--clr-text-body);
+    position: relative(40vw);
+    margin: 1rem;
+
+    &::before {
+        @include font-awesome-icon("\f078");  // Unicode for chevron-down
+        color: var(--clr-white);
+        font-size: 1rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);  /* Centering the icon */
+    }
+}
+
+//DOWNLOAD APP-BUTTONS 
+.download-button {
+    border-radius: 6px;
+    background-color: var(--clr-gray-900);
+    width: 90vw;
+    height: 53px;
+}
+
+.btn-pic {
+    width: 88vw;
+    height: 50px;
+    align-items: center;
+    object-fit: none;
+}
+
+#apple-pic-dark {
+    display: none;
+}
+
+#google-pic-dark {
+    display: none;
+}
+
+#signin-button {
+    display: none;
+}
+
+
+
+.hamburger-menu {
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+    
+    i {
+        font-size: 1.5rem;
+        color: var(--clr-text-body);
+    }
+}

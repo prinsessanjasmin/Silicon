@@ -1,0 +1,132 @@
+nav {
+    background-color: var(--clr-background);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.header-container {  
+    padding: .5rem 1rem .2rem .5rem;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#silicon-logo {
+    display: inline-block;
+    width: 100%;
+    
+    #s-text {
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    
+    #s-logo {
+        display: inline-block;
+        vertical-align: middle; 
+        margin-right: 0.5rem;
+    }
+
+    @include respond-to('medium') {
+        width: 30%;
+    }
+
+    @include respond-to('large') {
+        width: 15%;
+    }
+        
+}
+
+.nav-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-list-item {
+        list-style: none;
+    }
+
+    @include respond-to('medium') {
+        grid-template-columns: 2fr 2fr 1fr;
+        justify-items: right;
+    }
+
+    @include respond-to('large') { 
+        grid-template-columns: 5fr 2fr 2fr;
+        justify-items: right;
+        align-items: center;;
+    }
+}
+
+#toggle-switch-li {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    @include respond-to('medium') {
+        .toggle-switch-label {
+            display: inline;
+            padding-right: 1rem;
+        }
+    }
+
+}
+
+#hamburger-li {
+    grid-column: 3/4;
+    grid-row: 1/2;
+
+    @include respond-to('large') {
+        display: none;
+    }
+}
+
+#feature-menu {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--clr-gray-800);
+    text-decoration: none;
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+        color: var(--clr-primary);
+    }
+
+    @include respond-to('large') {
+        display: inline;
+        color: var(--clr-text-body);
+
+        #feature-menu-li {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            justify-self: left;
+        }
+    }
+}
+
+@include respond-to('large') {
+    #signin-btn-li {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    #signin-button {
+        display: block;
+        height: 40px;
+        text-decoration: none;
+        background-color: var(--clr-primary);
+        padding: .3rem 1rem;
+        
+        i {
+            padding: .5rem;
+        }
+
+        span {
+            color: var(--clr-white);
+        }
+    }
+}
