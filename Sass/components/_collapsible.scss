@@ -1,102 +1,85 @@
-.collapse-faq {
-    display: flex;
-    flex-direction: column;
-}
-
-.faq {
-    display: flex;
-    flex-direction: column;
-}
-
-
 /* Following collapsible buttons are made with help from W3 Schools tutorial */
 /* Style the button that is used to open and close the collapsible content */
-.collapsible {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: .2px solid var(--clr-gray-300);
-    border-radius: 6px;
-    background-color: var(--clr-background);
-    text-align: left;
-    outline: none;
-    
-    p {
-        font-family: "Manrope", sans-serif;
-        font-weight: 700;
-        font-size: 1rem;
-        color: var(--clr-text-body);
-    }
-    
-    #down-arrow {
-        background-color: var(--clr-background-gray);
-        color: var(--clr-text-body);
-        border-radius: 50%;
-        padding: .6rem; 
-    }
-}
 
 .collapse-faq {
-    margin-bottom: 2rem;
-}
-
-#faq-1 {
-    .content {
-        display: flex;
-    }
-    
-    #down-arrow {
-        background-color: var(--clr-primary);
-        transform: rotate(180deg);
-        color: var(--clr-white);
-        box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
-    } 
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-    padding: 8px 18px;
     display: flex;
     flex-direction: column;
-    color: var(--clr-gray-700);
-    background-color: var(--clr-background);
-    border: .2px solid var(--clr-gray-300);
-    border-radius: 6px;
-    overflow: hidden;
-    display: none;
-    
-    p {
-        padding-bottom: 1rem;
-        font-size: .9rem;
+    margin-bottom: 2rem;
+
+
+    .faq {
+        display: flex;
+        flex-direction: column;
+
+        .collapsible {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: .2px solid var(--clr-gray-300);
+            border-radius: 6px;
+            background-color: var(--clr-background);
+            text-align: left;
+            outline: none;
+            
+            p {
+                font-family: "Manrope", sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                color: var(--clr-text-body);
+            }
+            
+            #down-arrow {
+                background-color: var(--clr-background-gray);
+                color: var(--clr-text-body);
+                border-radius: 50%;
+                padding: .6rem; 
+            }
+
+            @include respond-to('large') {
+                margin-top: .5rem;
+            }
+        }
+
+        /* Style the collapsible content. Note: hidden by default */
+        .content {
+            padding: 8px 18px;
+            display: flex;
+            flex-direction: column;
+            color: var(--clr-gray-700);
+            background-color: var(--clr-background);
+            border: .2px solid var(--clr-gray-300);
+            border-radius: 6px;
+            overflow: hidden;
+            display: none;
+            
+            p {
+                padding-bottom: 1rem;
+                font-size: .9rem;
+            }
+        }
     }
-}
 
-
-@include respond-to('large') {
-    
-
-
-.collapse-faq {
-    grid-column: 2/3;
-    grid-row: 1/4;
-
-    .collapsible {
-        margin-top: .5rem;
+    #faq-1 {
+        .content {
+            display: flex;
+        }
+        
+        #down-arrow {
+            background-color: var(--clr-primary);
+            transform: rotate(180deg);
+            color: var(--clr-white);
+            box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+        } 
     }
-}
 
-#contact-container {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    align-self: start; 
-    justify-content: space-between;
-
-    .card {
-        min-height: max-content;
+    @include respond-to('large') {
+        .collapse-faq {
+            grid-column: 2/3;
+            grid-row: 1/4;
+        }
     }
-}
 }

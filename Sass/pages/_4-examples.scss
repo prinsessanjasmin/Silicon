@@ -1,7 +1,6 @@
 #page-4 {
     display: none;
 
-    
     @include respond-to('large') {
         display: block;
 

@@ -46,8 +46,6 @@
 
 
     @include respond-to('medium') {
-        max-width: 720px;
-        
         #teaser {
             color: var(--clr-text-body-600);
         }

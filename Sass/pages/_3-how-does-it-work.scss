@@ -1,15 +1,27 @@
 #page-3 {
     background-color: var(--clr-background-gray);
+}
 
 #p-3 {
-
     margin-top: 2rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
 
     .text-item {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        margin: 0 .5rem;
+        text-align: center;
+
+        @include respond-to('medium') {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @include respond-to('large') {
+            h2 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+        }
     }
 
     @include respond-to('medium') {
@@ -18,9 +30,68 @@
 
     @include respond-to('large') {
         max-width: 1140px;
-
         justify-content: center;
     }
-
 }
+
+
+#transfers {
+    @include respond-to('medium') {
+        width: 65vw;
+        padding: 2rem 0;
+        margin: auto;
+        text-align: center;
+        text-wrap: balance;
+
+        p {
+            padding-top: 1rem;
+        }
+    }
+
+    @include respond-to('large') {
+        display: block;
+        width: 100%;
+
+        p {
+            max-width: 40vw;
+            margin: auto;
+        }
+    }
+
+    #transfer-tablet {
+        display: none;
+
+        @include respond-to('medium') {
+            display: inline;
+            margin: auto;
+            padding: 0;
+        }
+
+        @include respond-to('large') {
+            display: none;
+        }
+    }
+
+    #step-3 {
+        display: none;
+
+        @include respond-to('medium') {
+            display: inline;
+            color: var(--clr-text-headlines);
+        }
+
+        @include respond-to('large') {
+            display: none;
+        }
+    }
+
+    #transfer-desktop {
+        display: none;
+
+        @include respond-to('large') {
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+    }    
 }

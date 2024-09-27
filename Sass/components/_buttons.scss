@@ -37,36 +37,117 @@
         top: 50%;
         transform: translate(-50%, -50%);  /* Centering the icon */
     }
+
+    @include respond-to ('large') {
+        margin: 1rem;
+    }
 }
 
-//DOWNLOAD APP-BUTTONS 
-.download-button {
-    border-radius: 6px;
-    background-color: var(--clr-gray-900);
-    width: 90vw;
-    height: 53px;
+
+.download-link {  //DOWNLOAD APP-BUTTONS 
+    @include respond-to('medium') {
+        justify-self: end;
+        grid-row: 4/5;
+    }
+
+    @include respond-to('large') {
+        align-self: flex-start;
+        grid-row: 3/4;
+    }
+
+    #apple {
+        @include respond-tp ('medium') {
+            grid-column: 1 / 2;
+        }
+    
+        @include respond-to('large') {
+            justify-self: center;
+            grid-column: 1 / 2;
+        }
+    }
+    
+    #google {
+        @include respond-tp ('medium') {
+            grid-column: 2 / 3;
+        }
+    
+        @include respond-to('large') {
+            justify-self: start;
+        }
+    }
+
+    .download-button {
+        @include button;
+        background-color: var(--clr-gray-900);
+        width: 90vw;
+        height: 53px;
+    
+        @include respond-to('medium') {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 44px;
+        }
+    
+        @include respond-to('large') {
+            height: 52px;
+            width: 180px;
+        }
+
+        #apple-box {
+            @include respond-tp ('medium') {
+                width: 126px;
+            }
+        }
+            
+        #google-box {
+            @include respond-tp ('medium') {
+                width: 138px;
+            }
+        }
+
+        .btn-pic {
+            width: 88vw;
+            height: 50px;
+            align-items: center;
+            object-fit: none;
+        
+            @include respond-to('medium') {
+                object-fit: contain;
+                width: 90%;
+            }
+
+            #apple-pic-dark {
+                display: none;
+            }
+            
+            #google-pic-dark {
+                display: none;
+            }
+        }
+    } 
 }
 
-.btn-pic {
-    width: 88vw;
-    height: 50px;
-    align-items: center;
-    object-fit: none;
-}
-
-#apple-pic-dark {
-    display: none;
-}
-
-#google-pic-dark {
-    display: none;
-}
 
 #signin-button {
     display: none;
+
+    @include respond-to('large') {
+        display: block;
+        height: 40px;
+        text-decoration: none;
+        background-color: var(--clr-primary);
+        padding: .3rem 1rem;
+        
+        i {
+            padding: .5rem;
+        }
+
+        span {
+            color: var(--clr-white);
+        }
+    }
 }
-
-
 
 .hamburger-menu {
     background-color: transparent;

@@ -5,22 +5,17 @@
     justify-content: center;
     align-items: center; 
     gap: .2em; 
+
+    @include respond-to('medium') {
+        flex-direction: row;
+        margin: auto;
+        padding: 1rem; 
+    }  
 }
 
 .footer {
     font-size: .9rem;
     color: var(--clr-gray-600);
 }
-
-@include respond-to('medium') {
-    max-width: 720px;
-
-    .footer-class {
-        display: flex;
-        flex-direction: row;
-        margin: auto;
-        padding: 1rem; 
-    }  
-  }
 
 
