@@ -1,9 +1,11 @@
-/* PAGE 2 */
+#page-2 {
+    margin: 2rem 0; 
+}
+
 #p-2 {
+    
 
     @include respond-to('large') {
-        max-width: 1140px;
-
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -83,7 +85,7 @@
     list-style: none;
     display: inline-flex;
     padding: .5rem;
-    align-items: start;
+    align-items: flex-start;
     gap: 1em;
     
     .icon-holder {

@@ -1,5 +1,7 @@
 #page-1 {
     background: var(--clr-gradient);
+    width: 100%;
+    height: 100vh;
 
     @include respond-to('large') {
         display: flex;
@@ -15,21 +17,52 @@
     padding-top: 1rem;  
     margin-bottom: 3rem;
 
+    
     @include respond-to('medium') {
         display: grid;
-        width: auto;
+        max-width: 100%;
         grid-template-columns: 2fr 2fr 3fr;
         grid-template-rows: auto 1fr 3fr 2fr 2fr;
         align-items: center; 
         justify-content: space-evenly;
+
+        .download-link {  
+            justify-self: end;
+            grid-row: 4/5;
+
+            #apple {
+                grid-column: 1 / 2;
+            }
+
+            #google {
+                grid-column: 2 / 3;
+            }
+        }
     }
 
     @include respond-to('large') {
         margin: 0;
+        max-width: 1140px;
         grid-template-columns: 1fr 2fr 4fr;
         grid-template-rows: auto 1fr 1fr 2fr;
+
+        .download-link {  //DOWNLOAD APP-BUTTONS 
+            align-self: flex-start;
+            grid-row: 3/4;
+
+            #apple {
+                justify-self: center;
+                grid-column: 1 / 2;
+            }
+        
+            #google {
+                justify-self: start;
+            }
+        }
     }
+
 }
+
 
 
 #headline {
@@ -75,6 +108,7 @@
         margin-bottom: 2rem;
     }
 }
+
 
 
 #discover {
@@ -131,3 +165,9 @@
         grid-column: 3/4; 
     }
 }
+
+
+
+
+
+

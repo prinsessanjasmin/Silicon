@@ -787,40 +787,7 @@ input:checked + .slider:before {
         margin: 0;
     }
     
-    #apple {
-        justify-self: end;
-        grid-row: 4/5;
-        grid-column: 1 / 2;
-    }
-
-    #google {
-        justify-self: end;
-        grid-row: 4/5;
-        grid-column: 2 / 3;
-    }
-
-    .download-button {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .btn-pic {
-        object-fit: contain;
-        width: 90%;
-    }
-
-    #apple-box {
-        display: flex;
-        width: 126px;
-        height: 44px;
-    }
-
-    #google-box {
-        display: flex;
-        width: 138px;
-        height: 44px;
-    }
-
+   
     #discover {
         grid-row: 5/6;
         grid-column: 1/3;

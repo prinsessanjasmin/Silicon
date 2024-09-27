@@ -1,17 +1,4 @@
-@mixin button {
-    font-family: "Manrope", sans-serif;
-    border: none; 
-    border-radius: 6px;
-    cursor: pointer;
-}
 
-@mixin round-button {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-}
 
 .button {
     @include button;
@@ -28,105 +15,40 @@
     position: relative(40vw);
     margin: 1rem;
 
-    &::before {
-        @include font-awesome-icon("\f078");  // Unicode for chevron-down
-        color: var(--clr-white);
-        font-size: 1rem;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);  /* Centering the icon */
-    }
+    // &::before {
+    //     @include font-awesome-icon("\f078");  // Unicode for chevron-down
+    //     color: var(--clr-white);
+    //     font-size: 1rem;
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);  /* Centering the icon */
+    // }
 
-    @include respond-to ('large') {
+    @include respond-to('large') {
         margin: 1rem;
     }
 }
 
+.download-button {
+    @include button;
+    background-color: var(--clr-gray-900);
+    width: 90vw;
+    height: 53px;
 
-.download-link {  //DOWNLOAD APP-BUTTONS 
     @include respond-to('medium') {
-        justify-self: end;
-        grid-row: 4/5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
     }
 
     @include respond-to('large') {
-        align-self: flex-start;
-        grid-row: 3/4;
+        height: 52px;
+        width: 180px;
     }
+} 
 
-    #apple {
-        @include respond-tp ('medium') {
-            grid-column: 1 / 2;
-        }
-    
-        @include respond-to('large') {
-            justify-self: center;
-            grid-column: 1 / 2;
-        }
-    }
-    
-    #google {
-        @include respond-tp ('medium') {
-            grid-column: 2 / 3;
-        }
-    
-        @include respond-to('large') {
-            justify-self: start;
-        }
-    }
-
-    .download-button {
-        @include button;
-        background-color: var(--clr-gray-900);
-        width: 90vw;
-        height: 53px;
-    
-        @include respond-to('medium') {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 44px;
-        }
-    
-        @include respond-to('large') {
-            height: 52px;
-            width: 180px;
-        }
-
-        #apple-box {
-            @include respond-tp ('medium') {
-                width: 126px;
-            }
-        }
-            
-        #google-box {
-            @include respond-tp ('medium') {
-                width: 138px;
-            }
-        }
-
-        .btn-pic {
-            width: 88vw;
-            height: 50px;
-            align-items: center;
-            object-fit: none;
-        
-            @include respond-to('medium') {
-                object-fit: contain;
-                width: 90%;
-            }
-
-            #apple-pic-dark {
-                display: none;
-            }
-            
-            #google-pic-dark {
-                display: none;
-            }
-        }
-    } 
-}
 
 
 #signin-button {
@@ -160,3 +82,50 @@
         color: var(--clr-text-body);
     }
 }
+
+
+#p-1 {
+    #apple-box, #google-box {
+        border-radius: 6px;
+        background-color: var(--clr-gray-900);
+        width: 90vw;
+        height: 53px;
+
+        @include respond-to('medium') {
+            display: flex;
+            width: 126px, 138px;
+            height: 44px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include respond-to('large') {
+            display: flex;
+            width: 180px;
+            height: 52px;
+        }
+    }
+
+    #apple-pic, google-pic {
+        width: 88vw;
+        height: 50px;
+        align-items: center;
+        object-fit: none;
+
+        @include respond-to('medium') {
+            object-fit: contain;
+            width: 90%;
+        }
+    }
+    
+    #apple-pic-dark {
+        display: none;
+    }
+    
+    #google-pic-dark {
+        display: none;
+    }
+}
+
+
+

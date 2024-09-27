@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-@import "./base/reset";
-@import "./base/typography";
-
 @import "./abstracts/mixins";
 @import "./abstracts/variables";
+
+@import "./base/reset";
+@import "./base/typography";
 
 @import "./themes/theme";
 @import "./themes/dark";
 
-@import "./components/components";
-
 @import "./layout/layout";
 
 @import "./pages/pages";
+
+@import "./components/components";
