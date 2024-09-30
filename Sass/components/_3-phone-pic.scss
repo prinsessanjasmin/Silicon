@@ -10,9 +10,7 @@
     }
 
     @include respond-to('medium') {
-        max-width: 1140px;
         padding: 2rem;
-        gap: 6rem;
         margin: auto;
     }
 
@@ -40,7 +38,6 @@
         width: 70vw;
         margin: 2rem auto;
         height: auto; 
-        /* justify-self: center; */
         position: relative;
 
         @include respond-to('medium') {

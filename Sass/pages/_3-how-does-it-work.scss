@@ -10,10 +10,12 @@
     .text-item {
         margin: 0 .5rem;
         text-align: center;
+        text-wrap: balance;
 
         @include respond-to('medium') {
             font-size: 2rem;
             margin-bottom: 1rem;
+            margin: auto;
         }
 
         @include respond-to('large') {
@@ -23,15 +25,6 @@
             }
         }
     }
-
-    @include respond-to('medium') {
-        max-width: 720px;
-    }
-
-    @include respond-to('large') {
-        max-width: 1140px;
-        justify-content: center;
-    }
 }
 
 
@@ -39,9 +32,6 @@
     @include respond-to('medium') {
         width: 65vw;
         padding: 2rem 0;
-        margin: auto;
-        text-align: center;
-        text-wrap: balance;
 
         p {
             padding-top: 1rem;

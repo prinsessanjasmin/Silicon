@@ -21,6 +21,8 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     background-color: var(--clr-white);
+    font-size: inherit;
+    padding: 0 1rem;
 
     @include respond-to('medium') {
         width: 215px;  
@@ -33,7 +35,6 @@
 
 #email-input::placeholder {
     font-size: 1rem;
-    padding: .5rem;
     color: var(--clr-gray-500);
 }
 

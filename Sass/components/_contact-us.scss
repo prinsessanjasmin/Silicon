@@ -12,11 +12,6 @@
         align-self: start;
         justify-content: space-between;
     }
-
-    @include respond-to('large') {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
     
     .card {
         border: 1px solid var(--clr-gray-500);
