@@ -177,6 +177,7 @@
     }
 
     #apple-pic-dark {
+
         display: none;
     }
     
@@ -190,7 +191,6 @@
         width: 90vw;
         height: 53px;
         border-radius: 6px;
-        background-color: var(--clr-gray-900);
         align-self: center;
 
         @include respond-to('medium') {

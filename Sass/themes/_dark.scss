@@ -6,7 +6,7 @@
     --clr-text-body: var(--clr-gray-500);
     --clr-text-body-600: var(--white);
 
-
+    
     .download-button {
         background-color: var(--clr-gray-100);
 
@@ -33,14 +33,18 @@
             p {
                 color: var(--clr-white);
             }
-
-            #down-arrow {
-                color: var(--clr-white);
-            }
         }
         
         .content {
             border: .05px solid var(--clr-gray-800);
+        }
+
+        .collapse-down {
+            background-color: var(--clr-gray-880);
+            
+            &::after {
+                color: var(--clr-white);
+            }
         }
     }
 
@@ -52,7 +56,7 @@
 
         #logo-section .logo-holder {
             border: .5px solid var(--clr-gray-800);
-            /* background-color: var(--clr-gradient); */
+            
         }   
     }
 

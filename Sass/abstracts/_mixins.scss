@@ -5,6 +5,12 @@
     }
 }
 
+@mixin font-awesome-icon($icon-unicode) {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: $icon-unicode;
+}
+
 @mixin button {
   font-family: "Manrope", sans-serif;
   border: none; 
@@ -13,15 +19,10 @@
 }
 
 @mixin round-button {
-  width: 45px;
-  height: 45px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   border: none;
   cursor: pointer;
 }
 
-@mixin font-awesome-icon($icon-unicode) {
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  content: $icon-unicode;
-}

@@ -8,27 +8,40 @@
     color: var(--clr-white);
 }
 
-.down-btn {
+.down-btn { //I got a lot of help with this button from ChatGPT
     @include round-button;
     background-color: var(--clr-background);
     color: var(--clr-text-body);
-    position: relative(40vw);
+    position: relative;
     margin: 1rem;
 
-    // &::before {
-    //     @include font-awesome-icon("\f078");  // Unicode for chevron-down
-    //     color: var(--clr-white);
-    //     font-size: 1rem;
-    //     position: absolute;
-    //     left: 50%;
-    //     top: 50%;
-    //     transform: translate(-50%, -50%);  /* Centering the icon */
-    // }
+    &::after {
+        @include font-awesome-icon("\f078");  // Unicode for chevron-down
+        color: var(--clr-text-body);
+        font-size: 1rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);  /* Centering the icon */
+    }
+
+    &:hover,
+    &:focus,
+    &::selection,
+    &:active {
+        background-color: var(--clr-primary);
+    }
+
+    &:hover::after,
+    &:focus::after {
+        color: var(--clr-white);
+    }
 
     @include respond-to('large') {
-        margin: 1rem;
+        margin: 1rem; 
     }
 }
+
 
 #signin-button {
     display: none;

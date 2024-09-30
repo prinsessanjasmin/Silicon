@@ -1,5 +1,6 @@
 /* Following collapsible buttons are made with help from W3 Schools tutorial */
 /* Style the button that is used to open and close the collapsible content */
+//The pseudo elements and classes are results of some help from ChatGPT
 
 .collapse-faq {
     display: flex;
@@ -18,13 +19,14 @@
             align-items: center;
             justify-content: space-between;
             cursor: pointer;
-            padding: 18px;
+            padding: 0 1rem;
             width: 100%;
             border: .2px solid var(--clr-gray-300);
             border-radius: 6px;
             background-color: var(--clr-background);
             text-align: left;
             outline: none;
+            position: relative;
             
             p {
                 font-family: "Manrope", sans-serif;
@@ -33,14 +35,38 @@
                 color: var(--clr-text-body);
             }
             
-            #down-arrow {
-                background-color: var(--clr-background-gray);
-                color: var(--clr-text-body);
-                border-radius: 50%;
-                padding: .6rem; 
+            .collapse-down {
+                background-color: var(--clr-gray-100);
+                margin: 1rem;
+                margin-right: 0;
+                
+                &::after {
+                    color: var(--clr-text-body);
+                }
+
+                &:hover,
+                &:focus,
+                &::selection,
+                &:active {
+                    background-color: var(--clr-primary);
+                }
+
+                &:hover::after,
+                &:focus::after {
+                    color: var(--clr-white);
+                }
+
+                &::selection::after, 
+                &:active::after {
+                    color: var(--clr-white);
+                    transform: translateY(-50%) rotate(180deg);
+                    transform-origin: 0.25rem;
+                    transition: transform 0.3s, color 0.3s; 
+                    box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+                }
             }
 
-            @include respond-to('large') {
+            @include respond-to('medium') {
                 margin-top: .5rem;
             }
         }
@@ -59,21 +85,34 @@
             
             p {
                 padding-bottom: 1rem;
-                font-size: .9rem;
+                font-size: 0.9rem;
             }
         }
     }
 
     #faq-1 {
+        .collapse-down {
+            background-color: var(--clr-primary);
+            box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+
+            &::after {
+                color: var(--clr-white);
+                transform: translateY(-50%) rotate(180deg); 
+                transform-origin: 0.25rem;
+            }
+            
+        }
+
+        .content {
+            display: flex;
+        } 
+    }
+
+    .collapsible::selection,
+    .collapsible:active {
         .content {
             display: flex;
         }
-        
-        #down-arrow {
-            background-color: var(--clr-primary);
-            transform: rotate(180deg);
-            color: var(--clr-white);
-            box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
-        } 
     }
+
 }

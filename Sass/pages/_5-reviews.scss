@@ -8,20 +8,22 @@
 
     #p-5 {
         @include respond-to('large') {
-            max-width: 1140px;
-
             display: flex;
             gap: 2rem;
             justify-content: space-evenly;
-            padding: 4rem 0;
+            padding: 4rem 1rem;
 
             #p-5-text {
-                min-width: 20vw;
+                flex: 1;
                 h2 {
                     text-align: left;
                     font-size: 2rem;
                     padding-right: 2rem;
                 }  
+            }
+
+            .review-card {
+                flex: 1;
             }
         }
     }
