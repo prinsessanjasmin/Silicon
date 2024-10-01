@@ -1,6 +1,6 @@
 const collapseDown = document.getElementsByClassName('collapse-down'); 
 
-
+collapseDown
 
 
 const darkmodeSwitch = document.getElementById('dm-switch'); 

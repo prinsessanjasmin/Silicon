@@ -9,9 +9,10 @@
         align-items: center;
     }
 
-    @include respond-to('medium') {
+    @include respond-to('large') {
         padding: 2rem;
         margin: auto;
+        gap: 4rem;
     }
 
     #first-phone {
@@ -22,7 +23,6 @@
             width: 23vw;
 
             img {
-                justify-self: center;
                 width: 95%;
                 height: auto;
             }
@@ -69,11 +69,11 @@
         display: none;
 
         @include respond-to('medium') {
-            display: block;
+            display: flex;
+            justify-content: flex-end;
             width: 23vw;
 
             img {
-                justify-self: center;
                 width: 95%;
                 height: auto;
             }

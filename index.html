@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We offer a new generation of the mobile banking. Save, spend and manage money in your pocket.">
     <link rel="stylesheet" href="/Sass/main-sass.css">
     <script src="https://kit.fontawesome.com/584828937d.js" crossorigin="anonymous"></script>
     <title>Silicon App</title>
@@ -27,7 +28,7 @@
                         <div class="toggle-switch-button">
                             <span class="toggle-switch-label">Dark Mode</span>
                             <label class="switch">
-                                <input type="checkbox" id="dm-switch">
+                                <input type="checkbox" id="dm-switch" aria-label="darkmode switch">
                                 <span class="slider round"></span>
                             </label> 
                             <!-- ovan kopierat från w3schools -->
@@ -40,7 +41,7 @@
                         </a> 
                     </li>
                     <li class="nav-list-item" id="hamburger-li">
-                        <button class="hamburger-menu">
+                        <button class="hamburger-menu" aria-label="click for full menu" >
                             <i class="fa-solid fa-bars"></i>
                         </button>
                     </li>
@@ -49,24 +50,24 @@
         </nav>
 
         <main>
-            <section aria-label="Showcase" ="page-1">
+            <section id="page-1" aria-label="Showcase">
                 <div class="content-box container" id="p-1">
                     <h1 id="headline">Manage All Your Money in One App</h1>
                     <p id="teaser">We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
-                    <a href="https://www.apple.com/app-store/" target="_blank" role="button" class="download-link" id="apple">
+                    <a href="https://www.apple.com/app-store/" target="_blank" type="button" class="download-link" id="apple">
                         <div class="download-button" id="apple-box">
                             <img class="btn-pic" id="apple-pic"src="/Buttons/appstore-light.svg fill.svg" alt="Link to download app via App Store.">   
                             <img class="btn-pic" id="apple-pic-dark" src="Buttons/appstore-dark.svg" alt="Link to download app via App Store.">
                         </div>
                     </a>
-                    <a href="https://play.google.com/store/" target="_blank" role="button" class="download-link" id="google">
+                    <a href="https://play.google.com/store/" target="_blank" type="button" class="download-link" id="google">
                         <div class="download-button" id="google-box">
                             <img class="btn-pic" id="google-pic" src="/Buttons/googleplay-light.svg fill.svg" alt="Link to download app via Google Play.">
                             <img class="btn-pic" id="google-pic-dark" src="/Buttons/googleplay-dark.svg" alt="Link to download app via Google Play.">
                         </div>
                     </a>
                     <div id="discover">
-                        <a href="#" class="down-btn" role="button"></a>
+                        <a href="#" class="down-btn" type="button" aria-label="Down button" ></a>
                         <span id="discover-more">Discover more</span>
                     </div>
                     <div class="image-container" id="img-co-1">
@@ -108,7 +109,7 @@
                             <h2 id="app-features">App Features</h2>
                             <p class="lrg-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at lacus.</p>
                         </div>
-                        <div class="app-feature-container">
+                        <ul class="app-feature-container">
                             <li class="app-feature-li">
                                 <div class="icon-holder">
                                     <img src="/Icons/Card.svg" alt="Icon depicting credit card.">
@@ -163,7 +164,7 @@
                                     <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
                                 </div>
                             </li>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -179,7 +180,7 @@
                             <!-- <img src="/Images/iPhone 12 Pro1.png" alt="Screen showing an economic flowchart." id="first-phone-desktop-img"> -->
                         </div>
                         <div class="image-container" id="iphone-montage">
-                            <img src="/Images/iPhone3.svg" id="iphone-3"> 
+                            <img src="/Images/iPhone3.svg" alt="" id="iphone-3"> 
                             <img src="/Images/screen-modified.svg" alt="Screen showing options of contacts to transfer money to." id="modified-screen">
                             <!-- <img src="/Images/crop-cards.png" alt="Screen overview of the cards registered in your Silicon App" id="first-phone-img"> -->
                         </div>
@@ -302,9 +303,9 @@
                     <!-- Following collapsible buttons are made with help from W3 Schools tutorial -->
                         
                         <div class="faq" id="faq-1">
-                            <div role="button" class="collapsible">
+                            <div type="button" class="collapsible">
                                 <p>Is any of my personal information stored in the App?</p>
-                                <button class="down-btn collapse-down"></button>
+                                <button class="down-btn collapse-down" aria-label="Read the answer" ></button>
                             </div>
                             <div class="content" id="content-1">
                                 <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
@@ -312,9 +313,9 @@
                             </div>
                         </div>
                         <div class="faq" id="faq-2">
-                            <div role="button" class="collapsible">
+                            <div type="button" class="collapsible">
                                 <p>What formats can I download my transaction history in?</p>
-                                <button class="down-btn collapse-down"></button>
+                                <button class="down-btn collapse-down" aria-label="Read the answer"></button>
                             </div>
                             <div class="content" id="content-2">
                                 <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
@@ -322,9 +323,9 @@
                             </div>
                         </div>  
                         <div class="faq" id="faq-3">     
-                            <div role="button" class="collapsible">
+                            <div type="button" class="collapsible">
                                 <p>Can I schedule future transfers?</p>
-                                <button class="down-btn collapse-down"></button>
+                                <button class="down-btn collapse-down" aria-label="Read the answer"></button>
                             </div>
                             <div class="content" id="content-3">
                                 <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
@@ -332,9 +333,9 @@
                             </div>
                         </div>
                         <div class="faq" id="faq-4">  
-                            <div role="button" class="collapsible">
+                            <div type="button" class="collapsible">
                                 <p>When can I use Banking App services?</p>
-                                <button class="down-btn collapse-down"></button>
+                                <button class="down-btn collapse-down" aria-label="Read the answer"></button>
                             </div>
                             <div class="content" id="content-4">
                                 <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
@@ -342,9 +343,9 @@
                             </div>
                         </div> 
                         <div class="faq" id="faq-5">  
-                            <div role="button" class="collapsible">
+                            <div type="button" class="collapsible">
                                 <p>Can I create my own password that is easy for me to remember?</p>
-                                <button class="down-btn collapse-down" ></button>
+                                <button class="down-btn collapse-down" aria-label="Read the answer"></button>
                             </div>
                             <div class="content" id="content-5">
                                 <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
@@ -352,9 +353,9 @@
                             </div>
                         </div> 
                         <div class="faq" id="faq-6">  
-                            <div role="button" class="collapsible">
+                            <div type="button" class="collapsible">
                                 <p>What happens if I forget or lose my password?</p>
-                                <button class="down-btn collapse-down"></button>
+                                <button class="down-btn collapse-down" aria-label="Read the answer"></button>
                             </div>
                             <div class="content" id="content-6">
                                 <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>

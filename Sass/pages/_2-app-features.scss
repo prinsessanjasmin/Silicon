@@ -4,15 +4,13 @@
 
 #p-2 {
     
-
     @include respond-to('large') {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         gap: 10rem;
         margin: auto;
-        margin-bottom: 6rem;
-        margin-top: 6rem;
+        margin-block: 6rem;
     }
 }
     
@@ -95,8 +93,6 @@
     }
     
     img {
-        height: 60px;
-        width: 60px;
         object-fit: contain;
     }
     

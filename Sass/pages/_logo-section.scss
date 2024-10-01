@@ -3,6 +3,7 @@
 
     @include respond-to('medium') {
         display: block;
+        margin-top: 3rem;
         
         .logo-container {
             margin-bottom: 3rem;

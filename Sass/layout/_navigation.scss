@@ -9,11 +9,9 @@ nav {
     padding: .5rem 1rem .2rem .5rem;
     display: flex;
     flex-direction: row;
-
 }
 
 #silicon-logo {
-    display: inline-block;
     width: 100%;
     
     #s-text {
@@ -34,8 +32,7 @@ nav {
 
     @include respond-to('large') {
         width: 15%;
-    }
-        
+    }     
 }
 
 .nav-list {
@@ -50,6 +47,23 @@ nav {
         list-style: none;
     }
 
+    #toggle-switch-li {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    
+        @include respond-to('medium') {
+            .toggle-switch-label {
+                display: inline;
+                padding-right: 1rem;
+            }
+        }
+    }
+
+    #hamburger-li {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
     @include respond-to('medium') {
         grid-template-columns: 2fr 2fr 1fr;
         justify-items: right;
@@ -57,30 +71,22 @@ nav {
 
     @include respond-to('large') { 
         grid-template-columns: 5fr 2fr 2fr;
-        justify-items: right;
-        align-items: center;;
-    }
-}
+        align-items: center;
 
-#toggle-switch-li {
-    grid-column: 2/3;
-    grid-row: 1/2;
-
-    @include respond-to('medium') {
-        .toggle-switch-label {
-            display: inline;
-            padding-right: 1rem;
+        #hamburger-li {
+            display: none;
         }
-    }
 
-}
+        #feature-menu-li {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            justify-self: left;
+        }
 
-#hamburger-li {
-    grid-column: 3/4;
-    grid-row: 1/2;
-
-    @include respond-to('large') {
-        display: none;
+        #signin-btn-li {
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
     }
 }
 
@@ -99,18 +105,5 @@ nav {
     @include respond-to('large') {
         display: inline;
         color: var(--clr-text-body);
-
-        #feature-menu-li {
-            grid-column: 1/2;
-            grid-row: 1/2;
-            justify-self: left;
-        }
-    }
-}
-
-@include respond-to('large') {
-    #signin-btn-li {
-        grid-column: 3/4;
-        grid-row: 1/2;
     }
 }

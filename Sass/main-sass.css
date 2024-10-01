@@ -42,13 +42,12 @@ html :default {
   --clr-text-body: var(--clr-gray-500);
   --clr-text-body-600: var(--white);
 }
-.darkmode .download-button {
-  background-color: var(--clr-gray-100);
-}
 .darkmode .download-button #apple-pic-dark {
+  background-color: #EFF2FC;
   display: block;
 }
 .darkmode .download-button #google-pic-dark {
+  background-color: #EFF2FC;
   display: block;
 }
 .darkmode .download-button #apple-pic {
@@ -211,7 +210,6 @@ nav {
 }
 
 #silicon-logo {
-  display: inline-block;
   width: 100%;
 }
 #silicon-logo #s-text {
@@ -246,6 +244,20 @@ nav {
 .nav-list .nav-list-item {
   list-style: none;
 }
+.nav-list #toggle-switch-li {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+@media (min-width: 768px) {
+  .nav-list #toggle-switch-li .toggle-switch-label {
+    display: inline;
+    padding-right: 1rem;
+  }
+}
+.nav-list #hamburger-li {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
 @media (min-width: 768px) {
   .nav-list {
     grid-template-columns: 2fr 2fr 1fr;
@@ -255,29 +267,19 @@ nav {
 @media (min-width: 1200px) {
   .nav-list {
     grid-template-columns: 5fr 2fr 2fr;
-    justify-items: right;
     align-items: center;
   }
-}
-
-#toggle-switch-li {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-@media (min-width: 768px) {
-  #toggle-switch-li .toggle-switch-label {
-    display: inline;
-    padding-right: 1rem;
-  }
-}
-
-#hamburger-li {
-  grid-column: 3/4;
-  grid-row: 1/2;
-}
-@media (min-width: 1200px) {
-  #hamburger-li {
+  .nav-list #hamburger-li {
     display: none;
+  }
+  .nav-list #feature-menu-li {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: left;
+  }
+  .nav-list #signin-btn-li {
+    grid-column: 3/4;
+    grid-row: 1/2;
   }
 }
 
@@ -297,19 +299,8 @@ nav {
     display: inline;
     color: var(--clr-text-body);
   }
-  #feature-menu #feature-menu-li {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    justify-self: left;
-  }
 }
 
-@media (min-width: 1200px) {
-  #signin-btn-li {
-    grid-column: 3/4;
-    grid-row: 1/2;
-  }
-}
 .footer-class {
   margin: 1rem;
   display: flex;
@@ -333,7 +324,6 @@ nav {
 
 #page-1 {
   background: var(--clr-gradient);
-  width: 100%;
 }
 @media (min-width: 1200px) {
   #page-1 {
@@ -349,7 +339,6 @@ nav {
   align-items: center;
   gap: 0.5rem;
   padding-top: 1rem;
-  margin-bottom: 3rem;
 }
 @media (min-width: 768px) {
   #p-1 {
@@ -463,8 +452,6 @@ nav {
 
 #discover {
   display: flex;
-  margin: 0;
-  padding: 0;
   justify-content: center;
   align-items: center;
 }
@@ -473,17 +460,15 @@ nav {
     justify-self: left;
   }
 }
-@media (min-width: 1200px) {
-  #discover {
-    justify-self: start;
-    margin-left: 0;
-  }
-}
 #discover #discover-more {
   font-size: 0.9rem;
   color: var(--clr-text-body-600);
 }
 
+.download-link .btn-pic {
+  width: 90vw;
+  border-radius: 6px;
+}
 @media (min-width: 768px) {
   .download-link {
     justify-self: end;
@@ -510,7 +495,6 @@ nav {
   background-color: var(--clr-gray-900);
   width: 90vw;
   height: 53px;
-  border-radius: 6px;
   align-self: center;
 }
 @media (min-width: 768px) {
@@ -572,6 +556,7 @@ nav {
 @media (min-width: 768px) {
   #logo-section {
     display: block;
+    margin-top: 3rem;
   }
   #logo-section .logo-container {
     margin-bottom: 3rem;
@@ -623,8 +608,7 @@ nav {
     justify-content: space-between;
     gap: 10rem;
     margin: auto;
-    margin-bottom: 6rem;
-    margin-top: 6rem;
+    margin-block: 6rem;
   }
 }
 
@@ -705,8 +689,6 @@ nav {
   display: inline-block;
 }
 .app-feature-li img {
-  height: 60px;
-  width: 60px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -720,8 +702,7 @@ nav {
 
 #p-3 {
   margin-top: 2rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-block: 3rem;
 }
 #p-3 .text-item {
   margin: 0 0.5rem;
@@ -1114,9 +1095,6 @@ nav {
   color: var(--clr-text-body);
 }
 
-.toggle-switch-button {
-  /* Rounded sliders */
-}
 .toggle-switch-button .toggle-switch-label {
   font-weight: 600;
   font-size: 1rem;
@@ -1176,14 +1154,6 @@ nav {
   justify-content: center;
   gap: 0;
 }
-@media (min-width: 768px) {
-  #input-div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0;
-  }
-}
 
 #email-input {
   height: 50px;
@@ -1221,11 +1191,6 @@ nav {
   width: 100px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-}
-@media (min-width: 768px) {
-  #sub-btn {
-    width: 77px;
-  }
 }
 @media (min-width: 1200px) {
   #sub-btn {
@@ -1275,7 +1240,6 @@ nav {
 .collapse-faq .faq {
   display: flex;
   flex-direction: column;
-  /* Style the collapsible content. Note: hidden by default */
 }
 .collapse-faq .faq .collapsible {
   display: flex;
@@ -1383,10 +1347,11 @@ nav {
     align-items: center;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   #three-displays {
     padding: 2rem;
     margin: auto;
+    gap: 4rem;
   }
 }
 #three-displays #first-phone {
@@ -1398,7 +1363,6 @@ nav {
     width: 23vw;
   }
   #three-displays #first-phone img {
-    justify-self: center;
     width: 95%;
     height: auto;
   }
@@ -1446,11 +1410,11 @@ nav {
 }
 @media (min-width: 768px) {
   #three-displays #third-phone {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
     width: 23vw;
   }
   #three-displays #third-phone img {
-    justify-self: center;
     width: 95%;
     height: auto;
   }
