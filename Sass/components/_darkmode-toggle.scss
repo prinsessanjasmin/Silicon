@@ -10,8 +10,8 @@
     .switch {
         position: relative;
         display: inline-block;
-        width: 43px;
-        height: 24px;
+        width: 44px;
+        height: 22px;
     }
     
     .switch input {
@@ -35,10 +35,10 @@
     .slider:before {
         position: absolute;
         content: "";
-        height: 18px;
-        width: 18px;
-        left: 3.3px;
-        bottom: 3.3px;
+        height: 22px;
+        width: 22px;
+        left: 0px;
+        bottom: 0px;
         background-color: var(--clr-white);
         -webkit-transition: .4s;
         transition: .4s;
@@ -53,9 +53,9 @@
     } 
     
     input:checked + .slider:before {
-        -webkit-transform: translateX(18px);
-        -ms-transform: translateX(18px);
-        transform: translateX(18px);
+        -webkit-transform: translateX(22px);
+        -ms-transform: translateX(22px);
+        transform: translateX(22px);
     }
     
     /* Rounded sliders */

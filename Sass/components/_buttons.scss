@@ -14,11 +14,11 @@
     color: var(--clr-text-body);
     position: relative;
     margin: 1rem;
+    height: 3rem;
 
     &::after {
         @include font-awesome-icon("\f078");  // Unicode for chevron-down
         color: var(--clr-text-body);
-        font-size: 1rem;
         position: absolute;
         left: 50%;
         top: 50%;
