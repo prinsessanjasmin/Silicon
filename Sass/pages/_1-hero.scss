@@ -1,93 +1,86 @@
 #page-1 {
-    background: var(--clr-gradient);
-
-    @include respond-to('large') {
-        display: flex;
-        justify-content: center;
-
-    }
+    background-color: var(--clr-background);
+    background-image: var(--clr-gradient);
 }
 
 #p-1 {
     display: flex; 
     flex-direction: column;
-    margin: auto;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     padding-top: 1rem;  
 
     @include respond-to('medium') {
         display: grid;
-        grid-template-columns: 2fr 2fr 3fr;
+        grid-template-columns: 2fr 2fr 6fr;
         grid-template-rows: auto 1fr 3fr 2fr 2fr;
-        align-items: center; 
         justify-content: space-evenly;
 
         #headline {
-            grid-row: 1/2;
             grid-column: 1/4;
+            grid-row: 1/2;
         }
 
         #teaser {
-            grid-row: 3/4;
             grid-column: 1/3; 
+            grid-row: 3/4;
         }
 
         #discover {
-            grid-row: 5/6;
             grid-column: 1/3;
+            grid-row: 5/6;
         }
 
         #apple {
-            grid-row: 4/5;
             grid-column: 1/2;
+            grid-row: 4/5;
         }
 
         #google {
-            grid-row: 4/5;
             grid-column: 2/3;
+            grid-row: 4/5;
         }
 
         #img-co-1 {
-            grid-row: 2/6;
             grid-column: 3/4;
+            grid-row: 2/6;
         }
     }
 
     @include respond-to('large') {
-        grid-template-columns: 1fr 2fr 4fr;
+        grid-template-columns: 1fr 1fr 1fr 5fr;
         grid-template-rows: auto 1fr 1fr 2fr;
 
         #headline {
+            grid-column: 1/4;   
             grid-row: 1/2;
-            grid-column: 1/3;   
         }
 
         #teaser {
+            grid-column: 1/4; 
             grid-row: 2/3;
-            grid-column: 1/3; 
         }
 
         #discover {
+            grid-column: 1/4;
             grid-row: 4/5;
-            grid-column: 1/3;
         }
 
         #apple {
-            grid-row: 3/4;
             grid-column: 1 / 2;
-            justify-self: center;
+            grid-row: 3/4;
+            align-self: start;
         }
     
         #google {
-            grid-row: 3/4;
             grid-column: 2 / 3;
-            justify-self: start;
+            grid-row: 3/4;
+            align-self: start;
         }
         
         #img-co-1 {
+            grid-column: 4/5; 
             grid-row: 1/5;
-            grid-column: 3/4; 
             justify-self: flex-end;
             align-self: flex-end;
         }
@@ -116,7 +109,7 @@
 
 #teaser {
     margin: 1rem;
-    width: 90vw;
+    width: 90%;
     font-size: 1.1rem;
     color: var(--clr-text-headlines);
     text-align: center;
@@ -150,71 +143,16 @@
     }
 }
 
-.download-link {  
 
-    .btn-pic {
-        width: 90vw;
-        border-radius: 6px;
-    }
-
-    @include respond-to('medium') {
-        justify-self: end;
-        align-self: center;
-    }
-
-    @include respond-to('large') {
-        align-self: flex-start;
-    }
-
-    #apple-pic-dark {
-        display: none;
-    }
-    
-    #google-pic-dark {
-        display: none;
-    }
-
-    .download-button {
-        @include button;
-        background-color: var(--clr-gray-900);
-        width: 90vw;
-        height: 53px;
-        align-self: center;
-
-        @include respond-to('medium') {
-            display: flex;
-            height: 44px;
-            width: 18vw;
-            justify-content: center;
-            align-items: center;
-        }
-
-        @include respond-to('large') {
-            display: flex;
-            width: 180px;
-            height: 52px;
-        }
-
-        .btn-pic {
-            width: 88vw;
-            height: 50px;
-            align-items: center;
-            object-fit: none;
-    
-            @include respond-to('medium') {
-                object-fit: contain;
-                width: 90%;
-            }
-        }
-    } 
-}
 
 #img-co-1 {
     display: none;
 
     @include respond-to('medium') {
-        display: flex;
-        width: 54vw;
+        display: block;
+        width: 100%;
+        align-self: flex-end;
+        justify-self: start;
 
         #ip-1 {
             width: 100%;

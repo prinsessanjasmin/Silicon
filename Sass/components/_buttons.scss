@@ -75,4 +75,30 @@
     }
 }
 
+.download-button {
+    @include button;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding: .5em 1em;
+    background-color: var(--clr-gray-900);
 
+    .btn-pic {
+        height: 2.5em;
+        
+        @include respond-to('medium') {
+            height: 1.6em;
+        }
+
+        @include respond-to('large') {
+            height: 2.5em;
+        }
+    }
+
+    .btn-pic-dark {
+        display: none;
+    }
+
+    
+}
