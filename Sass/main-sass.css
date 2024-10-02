@@ -193,6 +193,11 @@ span {
     max-width: 1140px;
   }
 }
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
 
 nav {
   background-color: var(--clr-background);
@@ -536,9 +541,14 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10rem;
+    gap: 5rem;
     margin: auto;
     margin-block: 6rem;
+  }
+}
+@media (min-width: 1400px) {
+  #p-2 {
+    gap: 10rem;
   }
 }
 
@@ -548,7 +558,7 @@ nav {
 @media (min-width: 1200px) {
   #side-view {
     display: block;
-    width: 22vw;
+    flex: 1;
     height: auto;
     align-self: flex-end;
   }
@@ -558,14 +568,24 @@ nav {
     width: 100%;
   }
 }
+@media (min-width: 1400px) {
+  #side-view {
+    flex: 2;
+  }
+}
 
 @media (min-width: 1200px) {
   #text-content {
     display: block;
-    width: 40vw;
+    flex: 2;
     justify-content: end;
     margin: 0;
     padding: 0;
+  }
+}
+@media (min-width: 1400px) {
+  #text-content {
+    flex: 5;
   }
 }
 #text-content .textpage {
@@ -578,7 +598,7 @@ nav {
 }
 @media (min-width: 1200px) {
   #text-content .textpage {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   #text-content .textpage #app-features {
     align-self: start;
@@ -1296,92 +1316,129 @@ nav {
 }
 
 #three-displays {
-  margin: auto;
-}
-@media (min-width: 768px) {
-  #three-displays {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-}
-@media (min-width: 1200px) {
-  #three-displays {
-    padding: 2rem;
-    margin: auto;
-    gap: 4rem;
-  }
-}
-#three-displays #first-phone {
-  display: none;
-}
-@media (min-width: 768px) {
-  #three-displays #first-phone {
-    display: block;
-    width: 23vw;
-  }
-  #three-displays #first-phone img {
-    width: 95%;
-    height: auto;
-  }
-}
-@media (min-width: 1200px) {
-  #three-displays #first-phone {
-    width: 16vw;
-  }
-}
-#three-displays #iphone-montage {
-  display: flex;
-  width: 70vw;
   margin: 2rem auto;
-  height: auto;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
-@media (min-width: 768px) {
-  #three-displays #iphone-montage {
-    margin: 0;
-    width: 25vw;
-  }
-}
-@media (min-width: 1200px) {
-  #three-displays #iphone-montage {
-    width: 18vw;
-  }
-}
-#three-displays #iphone-montage #iphone-3 {
-  place-self: center;
-  -o-object-fit: contain;
-     object-fit: contain;
+#three-displays img {
+  display: block;
   width: 100%;
-  position: relative;
 }
-#three-displays #iphone-montage #modified-screen {
-  margin: auto;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: absolute;
-  z-index: 1;
-}
-#three-displays #third-phone {
+#three-displays .displays-tablet,
+#three-displays .displays-dt {
   display: none;
 }
+#three-displays .image-container {
+  padding: auto;
+}
+#three-displays #phone-container-left,
+#three-displays #phone-container-right {
+  display: none;
+}
+#three-displays #phone-container-middle {
+  width: 100%;
+  position: relative;
+}
+#three-displays #phone-container-middle #iphone-3 {
+  width: 75%;
+  margin: auto;
+  position: relative;
+  z-index: 0;
+}
+#three-displays #phone-container-middle #phone-middle {
+  display: block;
+  position: absolute;
+  width: 76%;
+  left: 12%;
+  top: -1%;
+}
 @media (min-width: 768px) {
-  #three-displays #third-phone {
-    display: flex;
-    justify-content: flex-end;
-    width: 23vw;
+  #three-displays {
+    margin-bottom: 0;
   }
-  #three-displays #third-phone img {
-    width: 95%;
-    height: auto;
+  #three-displays #phone-container-left {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  #three-displays #phone-container-left #phone-left {
+    width: 90%;
+  }
+  #three-displays #phone-container-middle {
+    flex: 1;
+    position: relative;
+  }
+  #three-displays #phone-container-middle #iphone-3 {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+  }
+  #three-displays #phone-container-middle #phone-middle {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0.5%;
+    top: 0%;
+  }
+  #three-displays #phone-container-right {
+    display: flex;
+    flex: 1;
+  }
+  #three-displays #phone-container-right #phone-right {
+    width: 90%;
+  }
+  #three-displays .displays-tablet {
+    display: block;
   }
 }
 @media (min-width: 1200px) {
-  #three-displays #third-phone {
-    width: 16vw;
+  #three-displays {
+    margin-bottom: 0;
+  }
+  #three-displays .displays-tablet {
+    display: none;
+  }
+  #three-displays .displays-dt {
+    display: block;
+  }
+  #three-displays #phone-container-left {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  #three-displays #phone-container-left #phone-left-dt {
+    width: 90%;
+  }
+  #three-displays #phone-container-middle {
+    flex: 1;
+    position: relative;
+  }
+  #three-displays #phone-container-middle #iphone-3 {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+  }
+  #three-displays #phone-container-middle #phone-middle {
+    display: none;
+  }
+  #three-displays #phone-container-middle #phone-left {
+    display: block;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 2%;
+  }
+  #three-displays #phone-container-right {
+    display: flex;
+    flex: 1;
+  }
+  #three-displays #phone-container-right #phone-right-dt {
+    width: 90%;
   }
 }
 

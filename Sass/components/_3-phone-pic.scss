@@ -1,90 +1,277 @@
 #three-displays {
-    margin: auto; 
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    img {
+        display: block; 
+        width: 100%;
+    }
+
+    .displays-tablet,
+    .displays-dt {
+        display: none; 
+    }
+
+    .image-container {
+        padding: auto;
+    }
+
+    #phone-container-left, 
+    #phone-container-right {
+        display: none; 
+    }
+
+    #phone-container-middle {
+        width: 100%;
+        position: relative;
+
+        #iphone-3 {
+            width: 75%;
+            margin: auto;
+            position: relative;
+            z-index: 0;
+        }
     
+        #phone-middle {
+            display: block;
+            position: absolute; 
+            width: 76%;
+            left: 12%;
+            top: -1%;
+        }
+    }
+
     @include respond-to('medium') {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: space-evenly;
-        align-items: center;
+        margin-bottom: 0;
+
+        #phone-container-left {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+
+            #phone-left {
+                width: 90%;
+            }
+        } 
+
+        #phone-container-middle {
+            flex: 1;
+            position: relative;
+    
+            #iphone-3 {
+                width: 100%;
+                margin: auto;
+                position: relative;
+                z-index: 0;
+            }
+        
+            #phone-middle {
+                display: block;
+                position: absolute; 
+                width: 100%;
+                left: .5%;
+                top: 0%;
+            }
+        }
+
+        #phone-container-right {
+            display: flex;
+            flex: 1;
+
+            #phone-right {
+                width: 90%;
+            }
+        }
+
+        .displays-tablet {
+            display: block;
+        }
     }
 
     @include respond-to('large') {
-        padding: 2rem;
-        margin: auto;
-        gap: 4rem;
-    }
+        margin-bottom: 0;
 
-    #first-phone {
-        display: none;
+        .displays-tablet {
+            display: none;
+        }
 
-        @include respond-to('medium') {
+        .displays-dt {
             display: block;
-            width: 23vw;
-
-            img {
-                width: 95%;
-                height: auto;
-            }
         }
 
-        @include respond-to('large') {
-            width: 16vw;
-        }
-    }
-
-    #iphone-montage {
-        display: flex;
-        width: 70vw;
-        margin: 2rem auto;
-        height: auto; 
-        position: relative;
-
-        @include respond-to('medium') {
-            margin: 0;
-            width: 25vw;
-        }
-
-        @include respond-to('large') {
-            width: 18vw;
-        }
-        
-        #iphone-3 {
-            place-self: center;
-            object-fit: contain;
-            width: 100%;
-            position: relative;
-        }
-        
-        #modified-screen {
-            margin: auto;
-            width: 100%;
-            object-fit: contain;
-            position: absolute;
-            z-index: 1;
-        }
-    }
-
-    #third-phone {
-        display: none;
-
-        @include respond-to('medium') {
+        #phone-container-left {
             display: flex;
+            flex: 1;
             justify-content: flex-end;
-            width: 23vw;
 
-            img {
-                width: 95%;
-                height: auto;
+            #phone-left-dt {
+                width: 90%;
+            }
+        } 
+
+        #phone-container-middle {
+            flex: 1;
+            position: relative;
+    
+            #iphone-3 {
+                width: 100%;
+                margin: auto;
+                position: relative;
+                z-index: 0;
+            }
+        
+            #phone-middle {
+                display: none;
+            }
+
+            #phone-left {
+                display: block;
+                position: absolute; 
+                width: 90%;
+                left: 5%;
+                top: 2%;
             }
         }
 
-        @include respond-to('large') {
-            width: 16vw;
+
+        #phone-container-right {
+            display: flex;
+            flex: 1;
+
+            #phone-right-dt {
+                width: 90%;
+            }
         }
     }
+
 }
 
 
+//     @include respond-to('large') {
+//         padding: 2rem;
+//         margin: auto;
+//         gap: 4rem;
+//     }
 
+//     #phone-container-left {
+//         display: none;
 
+//         #phone-left {
+//             display: none;
+//         }
+
+//         #phone-left-dt {
+//             display: none; 
+//         }
+
+//         @include respond-to('medium') {
+//             display: flex;
+//             flex: 1;
+
+//             #phone-left {
+//                 width: 95%;
+//                 height: auto;
+//             }
+
+//             #phone-left-dt {
+//                 display: none;
+//             }
+//         }
+
+//         @include respond-to('large') {
+//             #phone-left {
+//                 display: none;
+//             }
+
+//             #phone-left-dt {
+//                 display: block;
+//                 width: 95%;
+//                 height: auto;
+//             }
+//         }
+//     }
+
+//     #phone-container-middle{
+//         display: flex;
+//         width: 70%;
+//         margin: 2rem auto;
+//         height: auto; 
+//         position: relative;
+
+//         #phone-left {
+//             display: none;
+//         }
+
+        
+
+//         #phone-middle {
+            
+//         }
+
+//         @include respond-to('medium') {
+//             display: flex;
+//             justify-content: flex-end;
+//             flex: 1;
+//         }
+
+//         @include respond-to('large') {
+//             flex: 1;
+
+//             #phone-middle {
+//                 display: none;
+//             }
+
+//             #phone-left {
+//                 display: block;
+//                 margin: auto;
+//                 width: 90%;
+//                 left: 5%;
+//                 top: 2%;
+//                 object-fit: contain;
+//                 position: absolute;
+//                 z-index: 1;
+//             }
+//         }
+//     }
+
+//     #phone-container-right {
+//         display: none;
+
+//         #phone-right {
+//             display: none;
+//         }
+
+//         #phone-right-dt {
+//             display: none;
+//         }
+
+//         @include respond-to('medium') {
+//             display: flex;
+//             justify-content: flex-end;
+//             flex: 1;
+
+//             #phone-right {
+//                 width: 95%;
+//                 height: auto;
+//             }
+//         }
+
+//         @include respond-to('large') {
+//             flex: 1;
+
+//             #phone-right {
+//                 display: none;
+//             }
+
+//             #phone-right-dt {
+//                 display: block;
+//                 width: 95%;
+//                 height: auto;
+//             }
+//         }
+//     }
+// }

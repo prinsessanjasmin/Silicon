@@ -10,4 +10,8 @@
   @include respond-to('large') {
     max-width: 1140px;
   }
+
+  @include respond-to('x-large') {
+    max-width: 1320px;
+  }
 }
