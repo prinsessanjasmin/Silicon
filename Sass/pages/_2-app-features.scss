@@ -66,8 +66,10 @@
                 font-size: 2.5rem;
             }
 
-            .lrg-p {
+            p {
                 text-align: left;
+                font-size: 1.1rem;
+                color: var(--clr-text-body-600)
             }  
         }
     }
