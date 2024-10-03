@@ -1,12 +1,11 @@
 /* Following collapsible buttons are made with help from W3 Schools tutorial */
-/* Style the button that is used to open and close the collapsible content */
+
 //The pseudo elements and classes are results of some help from ChatGPT
 
 .collapse-faq {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
-
 
     .faq {
         display: flex;
@@ -44,33 +43,15 @@
                     color: var(--clr-text-body);
                 }
 
-                &:hover,
-                &:focus,
-                &::selection,
-                &:active {
+                &:hover {
                     background-color: var(--clr-primary);
                 }
 
-                &:hover::after,
-                &:focus::after {
+                &:hover::after {
                     color: var(--clr-white);
                 }
-
-                &::selection::after, 
-                &:active::after {
-                    color: var(--clr-white);
-                    transform: translateY(-50%) rotate(180deg);
-                    transform-origin: 0.25rem;
-                    transition: transform 0.3s, color 0.3s; 
-                    box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
-                }
-            }
-
-            @include respond-to('medium') {
-                margin-top: .5rem;
             }
         }
-
        
         .content {
             padding: 8px 18px;
@@ -80,8 +61,14 @@
             background-color: var(--clr-background);
             border: .2px solid var(--clr-gray-300);
             border-radius: 6px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
             overflow: hidden;
-            display: none;
+
+            //Had ChatGPT help with creating the transition from collapsed to open view.
             
             p {
                 padding-bottom: 1rem;
@@ -90,28 +77,34 @@
         }
     }
 
-    #faq-1 {
-        .collapse-down {
-            background-color: var(--clr-primary);
-            box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+    .faq-open {
+        .collapsible {
+            border-bottom: none;
 
-            &::after {
-                color: var(--clr-white);
-                transform: translateY(-50%) rotate(180deg); 
-                transform-origin: 0.25rem;
-            } 
+            .collapse-down {
+                background-color: var(--clr-primary);
+                box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+        
+                &::after {
+                    color: var(--clr-white);
+                    transform: translateY(-50%) rotate(180deg); 
+                } 
+
+                &:hover {
+                    background-color: var(--clr-gray-500);
+                }
+
+                &:hover::after {
+                    color: var(--clr-gray-900);
+                }
+            }
         }
-
+        
         .content {
-            display: flex;
-        } 
-    }
-
-    .collapsible::selection,
-    .collapsible:active {
-        .content {
-            display: flex;
+            max-height: 400px;
+            opacity: 1;
+            margin-bottom: 1rem;
         }
     }
-
 }
+

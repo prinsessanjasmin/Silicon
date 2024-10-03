@@ -31,10 +31,6 @@
   --clr-system-info: #4C82F7;
 }
 
-html :default {
-  color-scheme: light;
-}
-
 .darkmode {
   --clr-background: var(--clr-gray-900);
   --clr-background-gray: var(--clr-gray-890);
@@ -68,6 +64,42 @@ html :default {
 }
 .darkmode #p-6 .collapse-down::after {
   color: var(--clr-white);
+}
+.darkmode #p-6 .collapse-down:hover {
+  background-color: var(--clr-primary);
+}
+.darkmode #p-6 .collapse-down:hover::after {
+  color: var(--clr-white);
+}
+.darkmode #p-6 .collapse-down::-moz-selection::after {
+  color: var(--clr-white);
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: 0.25rem;
+  -moz-transition: transform 0.3s, color 0.3s;
+  transition: transform 0.3s, color 0.3s;
+  box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+}
+.darkmode #p-6 .collapse-down::selection::after, .darkmode #p-6 .collapse-down:active::after {
+  color: var(--clr-white);
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: 0.25rem;
+  transition: transform 0.3s, color 0.3s;
+  box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+}
+.darkmode #p-6 .faq-open .collapsible .collapse-down {
+  background-color: var(--clr-primary);
+  box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
+}
+.darkmode #p-6 .faq-open .collapsible .collapse-down::after {
+  color: var(--clr-white);
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: 0.25rem;
+}
+.darkmode #p-6 .faq-open .collapsible .collapse-down:hover {
+  background-color: var(--clr-gray-500);
+}
+.darkmode #p-6 .faq-open .collapsible .collapse-down:hover::after {
+  color: var(--clr-gray-900);
 }
 @media (min-width: 768px) {
   .darkmode #teaser {
@@ -482,6 +514,11 @@ nav {
 @media (min-width: 1200px) {
   #img-co-1 {
     width: 100%;
+  }
+}
+@media (min-width: 1400px) {
+  #img-co-1 {
+    width: 85%;
   }
 }
 
@@ -999,6 +1036,8 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); /* Centering the icon */
+  transform-origin: 0.25rem;
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
 }
 .down-btn::-moz-selection {
   background-color: var(--clr-primary);
@@ -1211,7 +1250,6 @@ nav {
 }
 
 /* Following collapsible buttons are made with help from W3 Schools tutorial */
-/* Style the button that is used to open and close the collapsible content */
 .collapse-faq {
   display: flex;
   flex-direction: column;
@@ -1251,34 +1289,11 @@ nav {
 .collapse-faq .faq .collapsible .collapse-down::after {
   color: var(--clr-text-body);
 }
-.collapse-faq .faq .collapsible .collapse-down::-moz-selection {
+.collapse-faq .faq .collapsible .collapse-down:hover {
   background-color: var(--clr-primary);
 }
-.collapse-faq .faq .collapsible .collapse-down:hover, .collapse-faq .faq .collapsible .collapse-down:focus, .collapse-faq .faq .collapsible .collapse-down::selection, .collapse-faq .faq .collapsible .collapse-down:active {
-  background-color: var(--clr-primary);
-}
-.collapse-faq .faq .collapsible .collapse-down:hover::after, .collapse-faq .faq .collapsible .collapse-down:focus::after {
+.collapse-faq .faq .collapsible .collapse-down:hover::after {
   color: var(--clr-white);
-}
-.collapse-faq .faq .collapsible .collapse-down::-moz-selection::after {
-  color: var(--clr-white);
-  transform: translateY(-50%) rotate(180deg);
-  transform-origin: 0.25rem;
-  -moz-transition: transform 0.3s, color 0.3s;
-  transition: transform 0.3s, color 0.3s;
-  box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
-}
-.collapse-faq .faq .collapsible .collapse-down::selection::after, .collapse-faq .faq .collapsible .collapse-down:active::after {
-  color: var(--clr-white);
-  transform: translateY(-50%) rotate(180deg);
-  transform-origin: 0.25rem;
-  transition: transform 0.3s, color 0.3s;
-  box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
-}
-@media (min-width: 768px) {
-  .collapse-faq .faq .collapsible {
-    margin-top: 0.5rem;
-  }
 }
 .collapse-faq .faq .content {
   padding: 8px 18px;
@@ -1288,31 +1303,38 @@ nav {
   background-color: var(--clr-background);
   border: 0.2px solid var(--clr-gray-300);
   border-radius: 6px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
-  display: none;
 }
 .collapse-faq .faq .content p {
   padding-bottom: 1rem;
   font-size: 0.9rem;
 }
-.collapse-faq #faq-1 .collapse-down {
+.collapse-faq .faq-open .collapsible {
+  border-bottom: none;
+}
+.collapse-faq .faq-open .collapsible .collapse-down {
   background-color: var(--clr-primary);
   box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
 }
-.collapse-faq #faq-1 .collapse-down::after {
+.collapse-faq .faq-open .collapsible .collapse-down::after {
   color: var(--clr-white);
   transform: translateY(-50%) rotate(180deg);
-  transform-origin: 0.25rem;
 }
-.collapse-faq #faq-1 .content {
-  display: flex;
+.collapse-faq .faq-open .collapsible .collapse-down:hover {
+  background-color: var(--clr-gray-500);
 }
-.collapse-faq .collapsible::-moz-selection .content {
-  display: flex;
+.collapse-faq .faq-open .collapsible .collapse-down:hover::after {
+  color: var(--clr-gray-900);
 }
-.collapse-faq .collapsible::selection .content,
-.collapse-faq .collapsible:active .content {
-  display: flex;
+.collapse-faq .faq-open .content {
+  max-height: 400px;
+  opacity: 1;
+  margin-bottom: 1rem;
 }
 
 #three-displays {

@@ -165,5 +165,9 @@
     @include respond-to('large') {
         width: 100%;
     }
+
+    @include respond-to('x-large') {
+        width: 85%;
+    }
 }
 
