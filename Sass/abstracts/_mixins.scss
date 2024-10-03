@@ -27,3 +27,9 @@
   cursor: pointer;
 }
 
+@mixin text {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--clr-background);
+  color: var(--clr-text-body);
+}

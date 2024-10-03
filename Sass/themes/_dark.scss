@@ -49,15 +49,6 @@
             &:hover::after {
                 color: var(--clr-white);
             }
-
-            &::selection::after, 
-            &:active::after {
-                color: var(--clr-white);
-                transform: translateY(-50%) rotate(180deg);
-                transform-origin: 0.25rem;
-                transition: transform 0.3s, color 0.3s; 
-                box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
-            }
         }
 
         .faq-open {

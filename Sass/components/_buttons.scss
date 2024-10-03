@@ -17,25 +17,21 @@
     height: 3rem;
 
     &::after {
-        @include font-awesome-icon("\f078");  // Unicode for chevron-down
+        @include font-awesome-icon("\f078");
         color: var(--clr-text-body);
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);  /* Centering the icon */
+        transform: translate(-50%, -50%); 
         transform-origin: 0.25rem;
-        transition: transform 0.3s ease; /* Smooth transition for rotation */
+        transition: transform 0.3s ease; 
     }
 
-    &:hover,
-    &:focus,
-    &::selection,
-    &:active {
+    &:hover {
         background-color: var(--clr-primary);
     }
 
-    &:hover::after,
-    &:focus::after {
+    &:hover::after {
         color: var(--clr-white);
     }
 

@@ -71,21 +71,6 @@
 .darkmode #p-6 .collapse-down:hover::after {
   color: var(--clr-white);
 }
-.darkmode #p-6 .collapse-down::-moz-selection::after {
-  color: var(--clr-white);
-  transform: translateY(-50%) rotate(180deg);
-  transform-origin: 0.25rem;
-  -moz-transition: transform 0.3s, color 0.3s;
-  transition: transform 0.3s, color 0.3s;
-  box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
-}
-.darkmode #p-6 .collapse-down::selection::after, .darkmode #p-6 .collapse-down:active::after {
-  color: var(--clr-white);
-  transform: translateY(-50%) rotate(180deg);
-  transform-origin: 0.25rem;
-  transition: transform 0.3s, color 0.3s;
-  box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
-}
 .darkmode #p-6 .faq-open .collapsible .collapse-down {
   background-color: var(--clr-primary);
   box-shadow: 0 4px 6px 0 rgba(11, 15, 25, 0.15);
@@ -753,11 +738,6 @@ nav {
     color: var(--clr-text-headlines);
   }
 }
-@media (min-width: 1200px) {
-  #transfers #step-3 {
-    display: none;
-  }
-}
 #transfers #transfer-desktop {
   display: none;
 }
@@ -1035,17 +1015,14 @@ nav {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /* Centering the icon */
+  transform: translate(-50%, -50%);
   transform-origin: 0.25rem;
-  transition: transform 0.3s ease; /* Smooth transition for rotation */
+  transition: transform 0.3s ease;
 }
-.down-btn::-moz-selection {
+.down-btn:hover {
   background-color: var(--clr-primary);
 }
-.down-btn:hover, .down-btn:focus, .down-btn::selection, .down-btn:active {
-  background-color: var(--clr-primary);
-}
-.down-btn:hover::after, .down-btn:focus::after {
+.down-btn:hover::after {
   color: var(--clr-white);
 }
 @media (min-width: 1200px) {
@@ -1197,11 +1174,19 @@ nav {
 }
 
 #email-input::-moz-placeholder {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--clr-background);
+  color: var(--clr-text-body);
   font-size: 1rem;
   color: var(--clr-gray-500);
 }
 
 #email-input::placeholder {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--clr-background);
+  color: var(--clr-text-body);
   font-size: 1rem;
   color: var(--clr-gray-500);
 }
@@ -1526,4 +1511,13 @@ nav {
   #button-container {
     display: none;
   }
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }/*# sourceMappingURL=main-sass.css.map */

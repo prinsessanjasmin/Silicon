@@ -68,10 +68,6 @@
             display: inline;
             color: var(--clr-text-headlines);
         }
-
-        @include respond-to('large') {
-            display: none;
-        }
     }
 
     #transfer-desktop {
